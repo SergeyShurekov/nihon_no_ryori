@@ -1,0 +1,44 @@
+:root {
+  font-family: "Noto Sans JP", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #34261f;
+  background:
+    radial-gradient(circle at top, rgba(255, 221, 186, 0.65), transparent 34%),
+    linear-gradient(180deg, #fff8f0 0%, #f6ecde 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
