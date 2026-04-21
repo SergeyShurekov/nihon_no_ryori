@@ -1,15 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useFavorites } from "../context/useFavorites";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, missingIngredients = [] }) => {
   const { language } = useLanguage();
+  const { isFavorite, toggleFavorite } = useFavorites();
   const t = ui[language];
+  const favorite = isFavorite(recipe.id);
 
   return (
-    <Link to={`/recipe/${recipe.id}`} className="recipe-link">
-      <article className="recipe-card">
+    <article className="recipe-card">
+      <button
+        type="button"
+        className={`favorite-button${favorite ? " is-active" : ""}`}
+        aria-label={favorite ? t.removeFavorite : t.addFavorite}
+        onClick={() => toggleFavorite(recipe.id)}
+      >
+        {favorite ? "★" : "☆"}
+      </button>
+      <Link to={`/recipe/${recipe.id}`} className="recipe-link">
         <img src={recipe.image} alt={recipe.title[language]} className="recipe-image" />
         <div className="recipe-info">
           <div className="recipe-topline">
@@ -26,9 +37,20 @@ const RecipeCard = ({ recipe }) => {
               <span key={tag}>{tag}</span>
             ))}
           </div>
+          {missingIngredients.length > 0 ? (
+            <div className="missing-ingredients">
+              <p className="missing-ingredients__label">{t.missingIngredients}</p>
+              <div className="missing-ingredients__list">
+                {missingIngredients.map((ingredient) => (
+                  <span key={ingredient}>{ingredient}</span>
+                ))}
+              </div>
+              <p className="missing-ingredients__hint">{t.shoppingHint}</p>
+            </div>
+          ) : null}
         </div>
-      </article>
-    </Link>
+      </Link>
+    </article>
   );
 };
 

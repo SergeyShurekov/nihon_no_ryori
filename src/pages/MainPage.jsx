@@ -2,28 +2,88 @@ import React, { useState } from "react";
 import { recipes } from "../data/recipes";
 import { categories } from "../data/categories";
 import RecipeCard from "../components/RecipeCard";
+import { useFavorites } from "../context/useFavorites";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
 
+const normalizeTerm = (value) => value.trim().toLowerCase();
+
 const MainPage = () => {
   const { language } = useLanguage();
+  const { favorites } = useFavorites();
   const t = ui[language];
   const [searchTerm, setSearchTerm] = useState("");
+  const [pantryInput, setPantryInput] = useState("");
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const featuredRecipe = recipes[0];
   const visibleCategoryCount =
     selectedCategory === "all"
       ? categories.length
       : categories.filter((category) => category.id === selectedCategory).length;
+  const availableIngredients = pantryInput
+    .split(/[,،、;]/)
+    .map(normalizeTerm)
+    .filter(Boolean);
+  const pantryModeEnabled = availableIngredients.length > 0;
 
   const filteredRecipes = recipes.filter((recipe) => {
-    const matchesSearch = recipe.title[language]
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+    const searchValue = searchTerm.toLowerCase();
+    const searchPool = [
+      recipe.title[language],
+      recipe.description[language],
+      ...recipe.tags[language],
+      ...recipe.ingredients[language],
+      ...recipe.pantryTerms[language],
+    ]
+      .join(" ")
+      .toLowerCase();
+    const matchesSearch = searchPool.includes(searchValue);
     const matchesCategory =
       selectedCategory === "all" || recipe.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    const matchesFavorites = !favoritesOnly || favorites.includes(recipe.id);
+    return matchesSearch && matchesCategory && matchesFavorites;
   });
+  const pantryRecipes = filteredRecipes
+    .map((recipe) => {
+      const missingIngredients = recipe.pantryTerms[language].filter(
+        (requiredIngredient) =>
+          !availableIngredients.some((availableIngredient) => {
+            const normalizedRequired = normalizeTerm(requiredIngredient);
+            return (
+              availableIngredient.includes(normalizedRequired) ||
+              normalizedRequired.includes(availableIngredient)
+            );
+          }),
+      );
+      const matchedIngredientsCount =
+        recipe.pantryTerms[language].length - missingIngredients.length;
+
+      return {
+        recipe,
+        missingIngredients,
+        matchedIngredientsCount,
+      };
+    })
+    .sort((leftRecipe, rightRecipe) => {
+      if (leftRecipe.missingIngredients.length !== rightRecipe.missingIngredients.length) {
+        return leftRecipe.missingIngredients.length - rightRecipe.missingIngredients.length;
+      }
+
+      return rightRecipe.matchedIngredientsCount - leftRecipe.matchedIngredientsCount;
+    });
+  const exactRecipes = pantryModeEnabled
+    ? pantryRecipes.filter(({ missingIngredients }) => missingIngredients.length === 0)
+    : filteredRecipes.map((recipe) => ({ recipe, missingIngredients: [] }));
+  const nearRecipes = pantryModeEnabled
+    ? pantryRecipes.filter(
+        ({ matchedIngredientsCount, missingIngredients }) =>
+          matchedIngredientsCount > 0 && missingIngredients.length > 0,
+      )
+    : [];
+  const visibleResultsCount = pantryModeEnabled
+    ? exactRecipes.length + nearRecipes.length
+    : exactRecipes.length;
 
   return (
     <div className="main-page" id="catalog">
@@ -67,9 +127,42 @@ const MainPage = () => {
           <span>{t.visibleCategories}</span>
         </article>
         <article className="stat-card">
-          <strong>{filteredRecipes.length}</strong>
+          <strong>{visibleResultsCount}</strong>
           <span>{t.currentResults}</span>
         </article>
+        <article className="stat-card">
+          <strong>{favorites.length}</strong>
+          <span>{t.favoritesCount}</span>
+        </article>
+        <article className="stat-card">
+          <strong>{nearRecipes.length}</strong>
+          <span>{t.nearMatchesCount}</span>
+        </article>
+      </section>
+
+      <section className="pantry-panel">
+        <div className="pantry-panel__copy">
+          <p className="eyebrow">{t.pantrySearchTitle}</p>
+          <h2>{t.pantrySearchTitle}</h2>
+          <p>{t.pantrySearchBody}</p>
+        </div>
+        <div className="pantry-panel__controls">
+          <input
+            type="text"
+            placeholder={t.pantryPlaceholder}
+            className="search-input"
+            value={pantryInput}
+            onChange={(e) => setPantryInput(e.target.value)}
+          />
+          <p className="pantry-hint">{t.pantryHint}</p>
+          <button
+            type="button"
+            className={`category-btn ${favoritesOnly ? "active" : ""}`}
+            onClick={() => setFavoritesOnly((currentValue) => !currentValue)}
+          >
+            {t.favoritesOnly}
+          </button>
+        </div>
       </section>
 
       <nav className="category-nav">
@@ -92,24 +185,52 @@ const MainPage = () => {
 
       <section className="section-heading">
         <div>
-          <p className="eyebrow">{t.recipeSelection}</p>
-          <h2>{t.recipeSelectionTitle}</h2>
+          <p className="eyebrow">
+            {pantryModeEnabled ? t.pantryReadyTitle : t.recipeSelection}
+          </p>
+          <h2>{pantryModeEnabled ? t.pantryReadyTitle : t.recipeSelectionTitle}</h2>
         </div>
-        <p>{t.recipeSelectionBody}</p>
+        <p>{pantryModeEnabled ? t.pantryReadyBody : t.recipeSelectionBody}</p>
       </section>
 
       <div className="recipe-grid">
-        {filteredRecipes.length > 0 ? (
-          filteredRecipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
+        {exactRecipes.length > 0 ? (
+          exactRecipes.map(({ recipe, missingIngredients }) => (
+            <RecipeCard
+              key={recipe.id}
+              recipe={recipe}
+              missingIngredients={missingIngredients}
+            />
           ))
         ) : (
           <div className="recipe-empty">
-            <h2>{t.noRecipesTitle}</h2>
-            <p>{t.noRecipesBody}</p>
+            <h2>{pantryModeEnabled ? t.noExactPantryTitle : t.noRecipesTitle}</h2>
+            <p>{pantryModeEnabled ? t.noExactPantryBody : t.noRecipesBody}</p>
           </div>
         )}
       </div>
+
+      {nearRecipes.length > 0 ? (
+        <>
+          <section className="section-heading section-heading--subtle">
+            <div>
+              <p className="eyebrow">{t.nearMatchesTitle}</p>
+              <h2>{t.nearMatchesTitle}</h2>
+            </div>
+            <p>{t.nearMatchesBody}</p>
+          </section>
+
+          <div className="recipe-grid">
+            {nearRecipes.map(({ recipe, missingIngredients }) => (
+              <RecipeCard
+                key={`${recipe.id}-near`}
+                recipe={recipe}
+                missingIngredients={missingIngredients}
+              />
+            ))}
+          </div>
+        </>
+      ) : null}
 
       <section className="about-section" id="about">
         <div className="about-card">
