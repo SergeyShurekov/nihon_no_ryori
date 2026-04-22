@@ -599,6 +599,56 @@
   margin: 0 0 16px;
 }
 
+.ingredients-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+
+.servings-control {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+}
+
+.servings-control__label {
+  font-size: 0.9rem;
+  color: #7d6253;
+}
+
+.servings-control__buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(121, 78, 53, 0.08);
+}
+
+.servings-control__buttons strong {
+  min-width: 28px;
+  text-align: center;
+  color: #5f4335;
+}
+
+.servings-button {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: #6e4a35;
+  color: #fff8f0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.similar-recipes {
+  margin-top: 28px;
+}
+
 .about-section {
   margin-top: 28px;
 }
@@ -683,6 +733,14 @@
   .section-heading {
     flex-direction: column;
     align-items: start;
+  }
+
+  .ingredients-header {
+    flex-direction: column;
+  }
+
+  .servings-control {
+    justify-items: start;
   }
 
   .recipe-hero-image {

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { recipes } from "../data/recipes";
+import RecipeCard from "../components/RecipeCard";
 import RecipeDetailHeader from "../components/RecipeDetailHeader";
 import RecipeDetailIngredients from "../components/RecipeDetailIngredients";
 import RecipeDetailInstructions from "../components/RecipeDetailInstructions";
@@ -12,6 +13,7 @@ const RecipeDetailPage = () => {
   const t = ui[language];
   const { id } = useParams();
   const recipe = recipes.find((r) => r.id === id);
+  const [servingsByRecipe, setServingsByRecipe] = useState({});
 
   if (!recipe) {
     return (
@@ -27,11 +29,46 @@ const RecipeDetailPage = () => {
     );
   }
 
+  const currentServings = servingsByRecipe[recipe.id] ?? recipe.servings;
+  const setCurrentServings = (updater) => {
+    setServingsByRecipe((currentState) => {
+      const currentValue = currentState[recipe.id] ?? recipe.servings;
+      const nextValue =
+        typeof updater === "function" ? updater(currentValue) : updater;
+
+      return {
+        ...currentState,
+        [recipe.id]: nextValue,
+      };
+    });
+  };
+
+  const similarRecipes = recipes
+    .filter((candidateRecipe) => candidateRecipe.id !== recipe.id)
+    .map((candidateRecipe) => {
+      const sharedTags = candidateRecipe.tags[language].filter((tag) =>
+        recipe.tags[language].includes(tag),
+      ).length;
+      const sameCategory = candidateRecipe.category === recipe.category ? 2 : 0;
+      const sameRegion = candidateRecipe.region[language] === recipe.region[language] ? 1 : 0;
+
+      return {
+        recipe: candidateRecipe,
+        score: sharedTags + sameCategory + sameRegion,
+      };
+    })
+    .sort((leftRecipe, rightRecipe) => rightRecipe.score - leftRecipe.score)
+    .slice(0, 3);
+
   return (
     <div className="recipe-detail-page">
       <RecipeDetailHeader recipe={recipe} />
       <main className="recipe-detail-content">
-        <RecipeDetailIngredients recipe={recipe} />
+        <RecipeDetailIngredients
+          recipe={recipe}
+          currentServings={currentServings}
+          setCurrentServings={setCurrentServings}
+        />
         <RecipeDetailInstructions recipe={recipe} />
       </main>
       <section className="detail-notes">
@@ -50,6 +87,22 @@ const RecipeDetailPage = () => {
           </p>
         </article>
       </section>
+      {similarRecipes.length > 0 ? (
+        <section className="similar-recipes">
+          <div className="section-heading section-heading--subtle">
+            <div>
+              <p className="eyebrow">{t.similarRecipes}</p>
+              <h2>{t.similarRecipes}</h2>
+            </div>
+            <p>{t.similarRecipesBody}</p>
+          </div>
+          <div className="recipe-grid">
+            {similarRecipes.map(({ recipe: similarRecipe }) => (
+              <RecipeCard key={`similar-${similarRecipe.id}`} recipe={similarRecipe} />
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 };

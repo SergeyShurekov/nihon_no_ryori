@@ -29,6 +29,11 @@ export const ui = {
     noExactPantryBody: "ただし、下にあと少しで作れそうな候補を表示しています。",
     missingIngredients: "不足している材料",
     shoppingHint: "買い足すと作れます",
+    servingControl: "人数を調整",
+    decreaseServings: "人数を減らす",
+    increaseServings: "人数を増やす",
+    similarRecipes: "似ているレシピ",
+    similarRecipesBody: "同じ雰囲気で作りやすい料理を続けて探せます。",
     heroTitle: "日本の料理を探す",
     heroDescription:
       "家庭で作りやすい和食を中心に、主菜、汁物、甘味まで季節感のあるレシピをまとめた小さな料理帖です。",
@@ -100,6 +105,11 @@ export const ui = {
     noExactPantryBody: "Но ниже показаны блюда, которым не хватает всего нескольких ингредиентов.",
     missingIngredients: "Не хватает",
     shoppingHint: "Нужно докупить",
+    servingControl: "Изменить порции",
+    decreaseServings: "Уменьшить порции",
+    increaseServings: "Увеличить порции",
+    similarRecipes: "Похожие рецепты",
+    similarRecipesBody: "Рядом показаны блюда с похожим настроением, категорией или набором тегов.",
     heroTitle: "Откройте для себя японскую кухню",
     heroDescription:
       "Небольшой каталог домашних японских блюд: от основных горячих до супов и десертов с сезонным настроением.",

@@ -1,5 +1,5 @@
-import tempuraImage from "../assets/tempura.svg";
-import ramenImage from "../assets/ramen.svg";
+import tempuraImage from "../assets/tempura-vegetables-process.webp";
+import ramenImage from "../assets/syoyu-ramen.webp";
 import onigiriImage from "../assets/onigiri.svg";
 import misoImage from "../assets/miso.svg";
 import matchaImage from "../assets/matcha.svg";
