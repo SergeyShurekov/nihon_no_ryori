@@ -1,12 +1,19 @@
-import React, { useState } from "react";
-import { recipes } from "../data/recipes";
-import { categories } from "../data/categories";
+import { useMemo, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import { useFavorites } from "../context/useFavorites";
 import { useLanguage } from "../context/useLanguage";
+import { categories } from "../data/categories";
+import { recipes } from "../data/recipes";
 import { ui } from "../i18n/translations";
+import type { Recipe } from "../types";
 
-const normalizeTerm = (value) => value.trim().toLowerCase();
+const normalizeTerm = (value: string): string => value.trim().toLowerCase();
+
+interface PantryMatch {
+  recipe: Recipe;
+  missingIngredients: string[];
+  matchedIngredientsCount: number;
+}
 
 const MainPage = () => {
   const { language } = useLanguage();
@@ -15,7 +22,7 @@ const MainPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [pantryInput, setPantryInput] = useState("");
   const [favoritesOnly, setFavoritesOnly] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState<Recipe["category"] | "all">("all");
   const featuredRecipe = recipes[0];
   const visibleCategoryCount =
     selectedCategory === "all"
@@ -27,54 +34,65 @@ const MainPage = () => {
     .filter(Boolean);
   const pantryModeEnabled = availableIngredients.length > 0;
 
-  const filteredRecipes = recipes.filter((recipe) => {
-    const searchValue = searchTerm.toLowerCase();
-    const searchPool = [
-      recipe.title[language],
-      recipe.description[language],
-      ...recipe.tags[language],
-      ...recipe.ingredients[language],
-      ...recipe.pantryTerms[language],
-    ]
-      .join(" ")
-      .toLowerCase();
-    const matchesSearch = searchPool.includes(searchValue);
-    const matchesCategory =
-      selectedCategory === "all" || recipe.category === selectedCategory;
-    const matchesFavorites = !favoritesOnly || favorites.includes(recipe.id);
-    return matchesSearch && matchesCategory && matchesFavorites;
-  });
-  const pantryRecipes = filteredRecipes
-    .map((recipe) => {
-      const missingIngredients = recipe.pantryTerms[language].filter(
-        (requiredIngredient) =>
-          !availableIngredients.some((availableIngredient) => {
-            const normalizedRequired = normalizeTerm(requiredIngredient);
-            return (
-              availableIngredient.includes(normalizedRequired) ||
-              normalizedRequired.includes(availableIngredient)
-            );
-          }),
-      );
-      const matchedIngredientsCount =
-        recipe.pantryTerms[language].length - missingIngredients.length;
+  const filteredRecipes = useMemo(
+    () =>
+      recipes.filter((recipe) => {
+        const searchValue = searchTerm.toLowerCase();
+        const searchPool = [
+          recipe.title[language],
+          recipe.description[language],
+          ...recipe.tags[language],
+          ...recipe.ingredients[language],
+          ...recipe.pantryTerms[language],
+        ]
+          .join(" ")
+          .toLowerCase();
+        const matchesSearch = searchPool.includes(searchValue);
+        const matchesCategory =
+          selectedCategory === "all" || recipe.category === selectedCategory;
+        const matchesFavorites = !favoritesOnly || favorites.includes(recipe.id);
 
-      return {
-        recipe,
-        missingIngredients,
-        matchedIngredientsCount,
-      };
-    })
-    .sort((leftRecipe, rightRecipe) => {
-      if (leftRecipe.missingIngredients.length !== rightRecipe.missingIngredients.length) {
-        return leftRecipe.missingIngredients.length - rightRecipe.missingIngredients.length;
-      }
+        return matchesSearch && matchesCategory && matchesFavorites;
+      }),
+    [favorites, favoritesOnly, language, searchTerm, selectedCategory],
+  );
 
-      return rightRecipe.matchedIngredientsCount - leftRecipe.matchedIngredientsCount;
-    });
+  const pantryRecipes = useMemo<PantryMatch[]>(
+    () =>
+      filteredRecipes
+        .map((recipe) => {
+          const missingIngredients = recipe.pantryTerms[language].filter(
+            (requiredIngredient) =>
+              !availableIngredients.some((availableIngredient) => {
+                const normalizedRequired = normalizeTerm(requiredIngredient);
+                return (
+                  availableIngredient.includes(normalizedRequired) ||
+                  normalizedRequired.includes(availableIngredient)
+                );
+              }),
+          );
+          const matchedIngredientsCount =
+            recipe.pantryTerms[language].length - missingIngredients.length;
+
+          return {
+            recipe,
+            missingIngredients,
+            matchedIngredientsCount,
+          };
+        })
+        .sort((leftRecipe, rightRecipe) => {
+          if (leftRecipe.missingIngredients.length !== rightRecipe.missingIngredients.length) {
+            return leftRecipe.missingIngredients.length - rightRecipe.missingIngredients.length;
+          }
+
+          return rightRecipe.matchedIngredientsCount - leftRecipe.matchedIngredientsCount;
+        }),
+    [availableIngredients, filteredRecipes, language],
+  );
+
   const exactRecipes = pantryModeEnabled
     ? pantryRecipes.filter(({ missingIngredients }) => missingIngredients.length === 0)
-    : filteredRecipes.map((recipe) => ({ recipe, missingIngredients: [] }));
+    : filteredRecipes.map((recipe) => ({ recipe, missingIngredients: [], matchedIngredientsCount: 0 }));
   const nearRecipes = pantryModeEnabled
     ? pantryRecipes.filter(
         ({ matchedIngredientsCount, missingIngredients }) =>
@@ -97,7 +115,7 @@ const MainPage = () => {
             placeholder={t.searchPlaceholder}
             className="search-input"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
 
@@ -152,7 +170,7 @@ const MainPage = () => {
             placeholder={t.pantryPlaceholder}
             className="search-input"
             value={pantryInput}
-            onChange={(e) => setPantryInput(e.target.value)}
+            onChange={(event) => setPantryInput(event.target.value)}
           />
           <p className="pantry-hint">{t.pantryHint}</p>
           <button
@@ -172,13 +190,13 @@ const MainPage = () => {
         >
           {t.allCategories}
         </button>
-        {categories.map((cat) => (
+        {categories.map((category) => (
           <button
-            key={cat.id}
-            className={`category-btn ${selectedCategory === cat.id ? "active" : ""}`}
-            onClick={() => setSelectedCategory(cat.id)}
+            key={category.id}
+            className={`category-btn ${selectedCategory === category.id ? "active" : ""}`}
+            onClick={() => setSelectedCategory(category.id)}
           >
-            {cat.name[language]}
+            {category.name[language]}
           </button>
         ))}
       </nav>

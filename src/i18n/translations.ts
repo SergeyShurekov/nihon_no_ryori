@@ -5,6 +5,12 @@ export const ui = {
     navAbout: "このサイトについて",
     navAria: "メインナビゲーション",
     brandSubtitle: "日本料理のレシピ帳",
+    seoHomeTitle: "Nihon no Ryori | 日本料理レシピカタログ",
+    seoHomeDescription:
+      "日本料理のレシピを日本語とロシア語で探せる多言語カタログ。材料、作り方、食材検索、人数調整までまとめて確認できます。",
+    seoRecipeTitle: (title: string) => `${title}のレシピ | Nihon no Ryori`,
+    seoRecipeDescription: (title: string, description: string) =>
+      `${title}の材料、作り方、所要時間、人数の目安を掲載。${description}`,
     languageSwitcher: "言語切替",
     featuredDish: "Featured Dish",
     catalogStats: "catalog statistics",
@@ -58,7 +64,7 @@ export const ui = {
     instructions: "作り方",
     kitchenNotes: "Kitchen Notes",
     kitchenNotesTitle: "調理の目安",
-    kitchenNotesBody: ({ difficulty, price }) =>
+    kitchenNotesBody: ({ difficulty, price }: { difficulty: string; price: number }) =>
       `難易度は ${difficulty}、想定予算は ${price}円前後です。`,
     servingStyle: "Serving Style",
     servingStyleTitle: "合わせたい一品",
@@ -81,6 +87,12 @@ export const ui = {
     navAbout: "О проекте",
     navAria: "Основная навигация",
     brandSubtitle: "Каталог японской кухни",
+    seoHomeTitle: "Nihon no Ryori | Каталог рецептов японской кухни",
+    seoHomeDescription:
+      "Многоязычный каталог японских рецептов на русском и японском: блюда, ингредиенты, шаги приготовления, поиск по продуктам и пересчёт порций.",
+    seoRecipeTitle: (title: string) => `${title} | Рецепт Nihon no Ryori`,
+    seoRecipeDescription: (title: string, description: string) =>
+      `${title}: ингредиенты, шаги приготовления, время и количество порций. ${description}`,
     languageSwitcher: "Язык",
     featuredDish: "Рекомендуемое блюдо",
     catalogStats: "статистика каталога",
@@ -134,7 +146,7 @@ export const ui = {
     instructions: "Приготовление",
     kitchenNotes: "Заметки",
     kitchenNotesTitle: "Что важно учесть",
-    kitchenNotesBody: ({ difficulty, price }) =>
+    kitchenNotesBody: ({ difficulty, price }: { difficulty: string; price: number }) =>
       `Сложность: ${difficulty}. Ориентировочная стоимость: ${price} ₽.`,
     servingStyle: "Подача",
     servingStyleTitle: "С чем подать",

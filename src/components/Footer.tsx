@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
@@ -17,9 +16,15 @@ const Footer = () => {
         </div>
 
         <div className="site-footer__links">
-          <Link to="/" className="footer-link">{t.footerHome}</Link>
-          <a href="#catalog" className="footer-link">{t.footerCatalog}</a>
-          <a href="#about" className="footer-link">{t.footerAbout}</a>
+          <Link to="/" className="footer-link">
+            {t.footerHome}
+          </Link>
+          <a href="#catalog" className="footer-link">
+            {t.footerCatalog}
+          </a>
+          <a href="#about" className="footer-link">
+            {t.footerAbout}
+          </a>
         </div>
       </div>
     </footer>

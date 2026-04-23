@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { recipes } from "../data/recipes";
 import RecipeCard from "../components/RecipeCard";
 import RecipeDetailHeader from "../components/RecipeDetailHeader";
 import RecipeDetailIngredients from "../components/RecipeDetailIngredients";
 import RecipeDetailInstructions from "../components/RecipeDetailInstructions";
+import { recipes } from "../data/recipes";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
 
@@ -12,8 +12,8 @@ const RecipeDetailPage = () => {
   const { language } = useLanguage();
   const t = ui[language];
   const { id } = useParams();
-  const recipe = recipes.find((r) => r.id === id);
-  const [servingsByRecipe, setServingsByRecipe] = useState({});
+  const recipe = recipes.find((item) => item.id === id);
+  const [servingsByRecipe, setServingsByRecipe] = useState<Record<string, number>>({});
 
   if (!recipe) {
     return (
@@ -30,11 +30,10 @@ const RecipeDetailPage = () => {
   }
 
   const currentServings = servingsByRecipe[recipe.id] ?? recipe.servings;
-  const setCurrentServings = (updater) => {
+  const setCurrentServings = (updater: number | ((value: number) => number)) => {
     setServingsByRecipe((currentState) => {
       const currentValue = currentState[recipe.id] ?? recipe.servings;
-      const nextValue =
-        typeof updater === "function" ? updater(currentValue) : updater;
+      const nextValue = typeof updater === "function" ? updater(currentValue) : updater;
 
       return {
         ...currentState,
@@ -75,16 +74,17 @@ const RecipeDetailPage = () => {
         <article className="note-card">
           <p className="eyebrow">{t.kitchenNotes}</p>
           <h2>{t.kitchenNotesTitle}</h2>
-          <p>{t.kitchenNotesBody({ difficulty: recipe.difficulty[language], price: recipe.originalPrice })}</p>
+          <p>
+            {t.kitchenNotesBody({
+              difficulty: recipe.difficulty[language],
+              price: recipe.originalPrice,
+            })}
+          </p>
         </article>
         <article className="note-card">
           <p className="eyebrow">{t.servingStyle}</p>
           <h2>{t.servingStyleTitle}</h2>
-          <p>
-            {recipe.category === "main"
-              ? t.servingStyleMain
-              : t.servingStyleOther}
-          </p>
+          <p>{recipe.category === "main" ? t.servingStyleMain : t.servingStyleOther}</p>
         </article>
       </section>
       {similarRecipes.length > 0 ? (

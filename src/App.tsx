@@ -1,7 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import SeoManager from "./components/SeoManager";
 import FavoritesProvider from "./context/FavoritesProvider";
 import LanguageProvider from "./context/LanguageProvider";
 import MainPage from "./pages/MainPage";
@@ -14,6 +14,7 @@ function App() {
       <FavoritesProvider>
         <Router>
           <div className="app-shell">
+            <SeoManager />
             <Header />
             <main className="app-content">
               <Routes>

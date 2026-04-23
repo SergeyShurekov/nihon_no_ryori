@@ -1,10 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useFavorites } from "../context/useFavorites";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
+import type { Recipe } from "../types";
 
-const RecipeDetailHeader = ({ recipe }) => {
+interface RecipeDetailHeaderProps {
+  recipe: Recipe;
+}
+
+const RecipeDetailHeader = ({ recipe }: RecipeDetailHeaderProps) => {
   const { language } = useLanguage();
   const { isFavorite, toggleFavorite } = useFavorites();
   const t = ui[language];

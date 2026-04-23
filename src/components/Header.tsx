@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
@@ -8,8 +7,8 @@ const Header = () => {
   const t = ui[language];
   const navItems = [
     { to: "/", label: t.navHome, end: true },
-    { to: "/#catalog", label: t.navCatalog },
-    { to: "/#about", label: t.navAbout },
+    { to: "/#catalog", label: t.navCatalog, end: false },
+    { to: "/#about", label: t.navAbout, end: false },
   ];
 
   return (

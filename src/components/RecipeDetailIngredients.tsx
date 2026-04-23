@@ -1,15 +1,21 @@
-import React from "react";
 import { useLanguage } from "../context/useLanguage";
 import { ui } from "../i18n/translations";
+import type { Recipe } from "../types";
 
-const formatScaledNumber = (value) => {
+interface RecipeDetailIngredientsProps {
+  recipe: Recipe;
+  currentServings: number;
+  setCurrentServings: (updater: number | ((value: number) => number)) => void;
+}
+
+const formatScaledNumber = (value: number): string => {
   const roundedValue = Math.round(value * 100) / 100;
   return Number.isInteger(roundedValue)
     ? String(roundedValue)
     : String(roundedValue).replace(/\.0+$/, "").replace(/(\.\d*[1-9])0+$/, "$1");
 };
 
-const scaleIngredientLine = (line, scaleFactor) => {
+const scaleIngredientLine = (line: string, scaleFactor: number): string => {
   if (line.includes("適量") || line.includes("по вкусу")) {
     return line;
   }
@@ -17,6 +23,7 @@ const scaleIngredientLine = (line, scaleFactor) => {
   return line.replace(/\d+(?:[.,]\d+)?(?:\/\d+)?/g, (match) => {
     if (match.includes("/")) {
       const [numerator, denominator] = match.split("/").map(Number);
+
       if (!denominator) {
         return match;
       }
@@ -28,7 +35,11 @@ const scaleIngredientLine = (line, scaleFactor) => {
   });
 };
 
-const RecipeDetailIngredients = ({ recipe, currentServings, setCurrentServings }) => {
+const RecipeDetailIngredients = ({
+  recipe,
+  currentServings,
+  setCurrentServings,
+}: RecipeDetailIngredientsProps) => {
   const { language } = useLanguage();
   const t = ui[language];
   const scaleFactor = currentServings / recipe.servings;
@@ -63,8 +74,8 @@ const RecipeDetailIngredients = ({ recipe, currentServings, setCurrentServings }
         </div>
       </div>
       <ul>
-        {recipe.ingredients[language].map((item, index) => (
-          <li key={index}>{scaleIngredientLine(item, scaleFactor)}</li>
+        {recipe.ingredients[language].map((item) => (
+          <li key={item}>{scaleIngredientLine(item, scaleFactor)}</li>
         ))}
       </ul>
     </section>

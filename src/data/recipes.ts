@@ -1,11 +1,12 @@
 import tempuraImage from "../assets/tempura-vegetables-process.webp";
 import ramenImage from "../assets/syoyu-ramen.webp";
-import onigiriImage from "../assets/onigiri.svg";
+import onigiriImage from "../assets/onigiri-masu-ume.webp";
 import misoImage from "../assets/miso.svg";
 import matchaImage from "../assets/matcha.svg";
 import sobaImage from "../assets/soba.svg";
+import type { Recipe } from "../types";
 
-export const recipes = [
+export const recipes: Recipe[] = [
   {
     id: "tempura",
     title: {
