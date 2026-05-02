@@ -9,6 +9,7 @@ const Header = () => {
     { to: "/", label: t.navHome, end: true },
     { to: "/#catalog", label: t.navCatalog, end: false },
     { to: "/#about", label: t.navAbout, end: false },
+    { to: "/admin", label: t.navAdmin, end: false },
   ];
 
   return (

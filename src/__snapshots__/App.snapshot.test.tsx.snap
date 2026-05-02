@@ -64,6 +64,13 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
             >
               このサイトについて
             </a>
+            <a
+              class="site-nav__link"
+              data-discover="true"
+              href="/admin"
+            >
+              管理
+            </a>
           </nav>
           <div
             aria-label="言語切替"
@@ -791,6 +798,13 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
               href="/#about"
             >
               このサイトについて
+            </a>
+            <a
+              class="site-nav__link"
+              data-discover="true"
+              href="/admin"
+            >
+              管理
             </a>
           </nav>
           <div

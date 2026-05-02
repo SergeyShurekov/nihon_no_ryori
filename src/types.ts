@@ -39,6 +39,14 @@ export interface FavoritesContextValue {
   toggleFavorite: (recipeId: string) => void;
 }
 
+export interface RecipeCatalogContextValue {
+  recipes: Recipe[];
+  customRecipes: Recipe[];
+  addRecipe: (recipe: Omit<Recipe, "id">) => void;
+  updateRecipe: (recipeId: string, recipe: Omit<Recipe, "id">) => void;
+  deleteRecipe: (recipeId: string) => void;
+}
+
 export interface ProviderProps {
   children: ReactNode;
 }

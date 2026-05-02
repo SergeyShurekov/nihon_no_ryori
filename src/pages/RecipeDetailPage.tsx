@@ -4,12 +4,13 @@ import RecipeCard from "../components/RecipeCard";
 import RecipeDetailHeader from "../components/RecipeDetailHeader";
 import RecipeDetailIngredients from "../components/RecipeDetailIngredients";
 import RecipeDetailInstructions from "../components/RecipeDetailInstructions";
-import { recipes } from "../data/recipes";
 import { useLanguage } from "../context/useLanguage";
+import { useRecipeCatalog } from "../context/useRecipeCatalog";
 import { ui } from "../i18n/translations";
 
 const RecipeDetailPage = () => {
   const { language } = useLanguage();
+  const { recipes } = useRecipeCatalog();
   const t = ui[language];
   const { id } = useParams();
   const recipe = recipes.find((item) => item.id === id);

@@ -2,8 +2,8 @@ import { useMemo, useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import { useFavorites } from "../context/useFavorites";
 import { useLanguage } from "../context/useLanguage";
+import { useRecipeCatalog } from "../context/useRecipeCatalog";
 import { categories } from "../data/categories";
-import { recipes } from "../data/recipes";
 import { ui } from "../i18n/translations";
 import type { Recipe } from "../types";
 
@@ -18,6 +18,7 @@ interface PantryMatch {
 const MainPage = () => {
   const { language } = useLanguage();
   const { favorites } = useFavorites();
+  const { recipes } = useRecipeCatalog();
   const t = ui[language];
   const [searchTerm, setSearchTerm] = useState("");
   const [pantryInput, setPantryInput] = useState("");
@@ -54,7 +55,7 @@ const MainPage = () => {
 
         return matchesSearch && matchesCategory && matchesFavorites;
       }),
-    [favorites, favoritesOnly, language, searchTerm, selectedCategory],
+    [favorites, favoritesOnly, language, recipes, searchTerm, selectedCategory],
   );
 
   const pantryRecipes = useMemo<PantryMatch[]>(

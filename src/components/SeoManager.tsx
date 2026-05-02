@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { recipes } from "../data/recipes";
 import { useLanguage } from "../context/useLanguage";
+import { useRecipeCatalog } from "../context/useRecipeCatalog";
 import { ui } from "../i18n/translations";
 
 const DESCRIPTION_LIMIT = 160;
@@ -14,6 +14,7 @@ const trimDescription = (value: string): string =>
 const SeoManager = () => {
   const location = useLocation();
   const { language } = useLanguage();
+  const { recipes } = useRecipeCatalog();
   const t = ui[language];
 
   useEffect(() => {
@@ -36,12 +37,17 @@ const SeoManager = () => {
       }
     }
 
+    if (location.pathname === "/admin") {
+      nextTitle = t.seoAdminTitle;
+      nextDescription = t.seoAdminDescription;
+    }
+
     document.title = nextTitle;
 
     if (descriptionTag) {
       descriptionTag.setAttribute("content", trimDescription(nextDescription));
     }
-  }, [language, location.pathname, t]);
+  }, [language, location.pathname, recipes, t]);
 
   return null;
 };

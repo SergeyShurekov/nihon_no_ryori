@@ -164,7 +164,8 @@
 }
 
 .main-page,
-.recipe-detail-page {
+.recipe-detail-page,
+.admin-page {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 32px 0 48px;
@@ -649,6 +650,164 @@
   margin-top: 28px;
 }
 
+.admin-hero {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 28px;
+  border: 1px solid rgba(121, 78, 53, 0.14);
+  border-radius: 30px;
+  background: rgba(255, 250, 244, 0.9);
+}
+
+.admin-hero h1,
+.admin-hero p {
+  margin: 0;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 22px;
+}
+
+.admin-form,
+.admin-sidebar {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.admin-form {
+  padding: 24px;
+  border: 1px solid rgba(121, 78, 53, 0.14);
+  border-radius: 30px;
+  background: rgba(255, 251, 245, 0.92);
+  box-shadow: 0 24px 40px rgba(84, 52, 35, 0.08);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.admin-field {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-field span {
+  color: #6f5140;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.admin-field [aria-invalid="true"] {
+  border-color: #b44a3c;
+  box-shadow: 0 0 0 3px rgba(180, 74, 60, 0.12);
+}
+
+.admin-select,
+.admin-textarea {
+  width: 100%;
+  border: 1px solid #d8c8ba;
+  border-radius: 18px;
+  background: rgba(255, 252, 247, 0.9);
+  color: #34261f;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.admin-select {
+  padding: 14px 18px;
+}
+
+.admin-textarea {
+  min-height: 120px;
+  padding: 14px 18px;
+  resize: vertical;
+}
+
+.admin-submit {
+  justify-self: start;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #6e4a35;
+  color: #fff8f0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-cancel,
+.admin-delete {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.admin-cancel {
+  background: rgba(121, 78, 53, 0.12);
+  color: #6e4a35;
+}
+
+.admin-delete {
+  background: rgba(168, 54, 54, 0.12);
+  color: #9b2f2f;
+}
+
+.admin-error,
+.admin-error-summary {
+  margin: 0;
+  color: #a33c30;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.admin-error-summary {
+  padding: 12px 14px;
+  border: 1px solid rgba(168, 54, 54, 0.18);
+  border-radius: 16px;
+  background: rgba(255, 241, 239, 0.9);
+}
+
+.admin-success {
+  margin: 0;
+  color: #2f7d4b;
+  font-weight: 600;
+}
+
+.admin-recipe-item {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(121, 78, 53, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 250, 244, 0.88);
+}
+
+.admin-recipe-item h3,
+.admin-recipe-item p {
+  margin: 0;
+}
+
+.admin-recipe-item__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .about-section {
   margin-top: 28px;
 }
@@ -695,7 +854,8 @@
   .site-header__inner,
   .site-footer__inner,
   .main-page,
-  .recipe-detail-page {
+  .recipe-detail-page,
+  .admin-page {
     width: min(100% - 24px, 1120px);
   }
 
@@ -724,6 +884,8 @@
   .main-hero,
   .stats-row,
   .pantry-panel,
+  .admin-layout,
+  .admin-grid,
   .recipe-detail-header,
   .recipe-detail-content,
   .detail-notes {
