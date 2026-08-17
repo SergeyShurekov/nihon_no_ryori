@@ -9,20 +9,60 @@ export interface Category {
   name: LocalizedText;
 }
 
+export interface IngredientGroup {
+  key: string;
+  name: LocalizedText;
+  items: LocalizedList;
+}
+
+export interface InstructionSection {
+  title: LocalizedText;
+  steps: LocalizedList;
+  tips: LocalizedList;
+}
+
+export interface CommonMistake {
+  mistake: LocalizedText;
+  consequence: LocalizedText;
+  solution: LocalizedText;
+}
+
+export interface ServingProfileItem {
+  aspect: LocalizedText;
+  description: LocalizedText;
+}
+
+export interface StorageItem {
+  component: LocalizedText;
+  storage: LocalizedText;
+  reheating: LocalizedText;
+}
+
 export interface Recipe {
   id: string;
   title: LocalizedText;
   description: LocalizedText;
   category: Category["id"];
   image: string;
+  prepTime: number;
+  cookTime: number;
   time: number;
   servings: number;
   originalPrice: number;
   difficulty: LocalizedText;
+  cuisine: LocalizedText;
   region: LocalizedText;
   season: LocalizedText;
   tags: LocalizedList;
   pantryTerms: LocalizedList;
+  ingredientGroups: IngredientGroup[];
+  instructionSections: InstructionSection[];
+  commonMistakes: CommonMistake[];
+  servingProfile: ServingProfileItem[];
+  upgrades: LocalizedList;
+  storage: StorageItem[];
+  adaptations: LocalizedList;
+  relatedRecipes: string[];
   ingredients: LocalizedList;
   instructions: LocalizedList;
 }

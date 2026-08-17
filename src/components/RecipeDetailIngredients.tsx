@@ -43,6 +43,16 @@ const RecipeDetailIngredients = ({
   const { language } = useLanguage();
   const t = ui[language];
   const scaleFactor = currentServings / recipe.servings;
+  const groups =
+    recipe.ingredientGroups.length > 0
+      ? recipe.ingredientGroups
+      : [
+          {
+            key: "all",
+            name: { ja: t.ingredients, ru: t.ingredients },
+            items: recipe.ingredients,
+          },
+        ];
 
   return (
     <section className="recipe-detail-section ingredients-section">
@@ -73,11 +83,17 @@ const RecipeDetailIngredients = ({
           </div>
         </div>
       </div>
-      <ul>
-        {recipe.ingredients[language].map((item) => (
-          <li key={item}>{scaleIngredientLine(item, scaleFactor)}</li>
-        ))}
-      </ul>
+
+      {groups.map((group) => (
+        <div className="ingredient-group" key={`${group.key}-${group.name[language]}`}>
+          <h3>{group.name[language]}</h3>
+          <ul>
+            {group.items[language].map((item) => (
+              <li key={item}>{scaleIngredientLine(item, scaleFactor)}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   );
 };
