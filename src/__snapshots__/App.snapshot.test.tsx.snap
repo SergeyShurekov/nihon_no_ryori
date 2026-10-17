@@ -132,19 +132,19 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
               Featured Dish
             </p>
             <h2>
-              海老と野菜の天ぷら
+              茄子の味噌煮
             </h2>
             <p>
-              海老、かぼちゃ、ししとうを軽い衣で揚げる、週末の定番てんぷら盛り合わせです。
+              定番の関東かてり料理。ナスに豚ひき肉、生姜、ニンニクを濃厚な味噌汁で煮込み、果肉がクリーミーになり、肌の形が保たれるまで煮込みます。豚脂肪は、味噌の脂溶性の香りを溶かし、オウアミ（豚イノシネート+味噌グルタミン酸塩）の相乗効果を生み出し、ナスを「水のスポンジ」から「味のスポンジ」に変えます。秋冬の最も暖かい料理の1つである温かいご飯を添えてお召し上がりいただけます。
             </p>
             <div
               class="hero-meta"
             >
               <span>
-                東京
+                家庭料理
               </span>
               <span>
-                春
+                夏
               </span>
               <span>
                 中級
@@ -160,7 +160,7 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
             class="stat-card"
           >
             <strong>
-              6
+              32
             </strong>
             <span>
               掲載レシピ
@@ -190,7 +190,7 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
             class="stat-card"
           >
             <strong>
-              6
+              32
             </strong>
             <span>
               現在の候補
@@ -319,12 +319,12 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
             <a
               class="recipe-link"
               data-discover="true"
-              href="/recipe/tempura"
+              href="/recipe/baklazhany-v-miso-s-svinym-farshem"
             >
               <img
-                alt="海老と野菜の天ぷら"
+                alt="茄子の味噌煮"
                 class="recipe-image"
-                src="/src/assets/tempura-vegetables-process.webp"
+                src="/recipe-placeholder.svg"
               />
               <div
                 class="recipe-info"
@@ -332,318 +332,18 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
                 <div
                   class="recipe-topline"
                 >
-                  <span>
-                    東京
-                  </span>
-                  <span>
-                    春
-                  </span>
-                </div>
-                <h3>
-                  海老と野菜の天ぷら
-                </h3>
-                <p>
-                  海老、かぼちゃ、ししとうを軽い衣で揚げる、週末の定番てんぷら盛り合わせです。
-                </p>
-                <p
-                  class="recipe-meta"
-                >
-                  45 分 | 2 人分
-                </p>
-                <div
-                  class="recipe-tags"
-                >
-                  <span>
-                    揚げ物
-                  </span>
-                  <span>
-                    和定食
-                  </span>
-                  <span>
-                    サクサク
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article
-            class="recipe-card"
-          >
-            <button
-              aria-label="お気に入りに追加"
-              class="favorite-button"
-              type="button"
-            >
-              ☆
-            </button>
-            <a
-              class="recipe-link"
-              data-discover="true"
-              href="/recipe/ramen"
-            >
-              <img
-                alt="醤油ラーメン"
-                class="recipe-image"
-                src="/src/assets/syoyu-ramen.webp"
-              />
-              <div
-                class="recipe-info"
-              >
-                <div
-                  class="recipe-topline"
-                >
-                  <span>
-                    東京
-                  </span>
-                  <span>
-                    冬
-                  </span>
-                </div>
-                <h3>
-                  醤油ラーメン
-                </h3>
-                <p>
-                  鶏ガラと昆布のうま味を重ねた、すっきりしながらも奥行きのある醤油ラーメンです。
-                </p>
-                <p
-                  class="recipe-meta"
-                >
-                  60 分 | 2 人分
-                </p>
-                <div
-                  class="recipe-tags"
-                >
-                  <span>
-                    麺料理
-                  </span>
-                  <span>
-                    だし
-                  </span>
-                  <span>
-                    温まる
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article
-            class="recipe-card"
-          >
-            <button
-              aria-label="お気に入りに追加"
-              class="favorite-button"
-              type="button"
-            >
-              ☆
-            </button>
-            <a
-              class="recipe-link"
-              data-discover="true"
-              href="/recipe/onigiri"
-            >
-              <img
-                alt="鮭と梅のおにぎり"
-                class="recipe-image"
-                src="/src/assets/onigiri-masu-ume.webp"
-              />
-              <div
-                class="recipe-info"
-              >
-                <div
-                  class="recipe-topline"
-                >
-                  <span>
-                    全国
-                  </span>
-                  <span>
-                    通年
-                  </span>
-                </div>
-                <h3>
-                  鮭と梅のおにぎり
-                </h3>
-                <p>
-                  朝食や軽食に使いやすい、塩鮭と梅干しを使った具だくさんのおにぎりセットです。
-                </p>
-                <p
-                  class="recipe-meta"
-                >
-                  20 分 | 3 人分
-                </p>
-                <div
-                  class="recipe-tags"
-                >
-                  <span>
-                    軽食
-                  </span>
-                  <span>
-                    弁当
-                  </span>
-                  <span>
-                    米料理
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article
-            class="recipe-card"
-          >
-            <button
-              aria-label="お気に入りに追加"
-              class="favorite-button"
-              type="button"
-            >
-              ☆
-            </button>
-            <a
-              class="recipe-link"
-              data-discover="true"
-              href="/recipe/miso-soup"
-            >
-              <img
-                alt="豆腐とわかめの味噌汁"
-                class="recipe-image"
-                src="data:image/svg+xml,%3csvg%20width='1200'%20height='900'%20viewBox='0%200%201200%20900'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='1200'%20height='900'%20fill='%23F2E0CC'/%3e%3cellipse%20cx='601'%20cy='750'%20rx='312'%20ry='78'%20fill='%23D3B79A'/%3e%3cpath%20d='M355%20322C355%20246%20465%20184%20601%20184C737%20184%20847%20246%20847%20322V511C847%20619%20737%20707%20601%20707C465%20707%20355%20619%20355%20511V322Z'%20fill='%237C2E24'/%3e%3cellipse%20cx='601'%20cy='352'%20rx='220'%20ry='112'%20fill='%23A1592D'/%3e%3cellipse%20cx='514'%20cy='345'%20rx='54'%20ry='34'%20fill='%23EFE7D4'/%3e%3cellipse%20cx='677'%20cy='323'%20rx='63'%20ry='36'%20fill='%23E7DAB2'/%3e%3cellipse%20cx='596'%20cy='388'%20rx='78'%20ry='40'%20fill='%23F6E7B0'/%3e%3crect%20x='485'%20y='470'%20width='232'%20height='36'%20rx='18'%20fill='%236BA85A'/%3e%3crect%20x='457'%20y='530'%20width='290'%20height='28'%20rx='14'%20fill='%23C37E49'/%3e%3cpath%20d='M435%20249L520%20178'%20stroke='%23402D20'%20stroke-width='14'%20stroke-linecap='round'/%3e%3cpath%20d='M769%20247L680%20174'%20stroke='%23402D20'%20stroke-width='14'%20stroke-linecap='round'/%3e%3c/svg%3e"
-              />
-              <div
-                class="recipe-info"
-              >
-                <div
-                  class="recipe-topline"
-                >
-                  <span>
-                    全国
-                  </span>
-                  <span>
-                    通年
-                  </span>
-                </div>
-                <h3>
-                  豆腐とわかめの味噌汁
-                </h3>
-                <p>
-                  毎日の食卓に合わせやすい、だしの香りを生かした基本の味噌汁です。
-                </p>
-                <p
-                  class="recipe-meta"
-                >
-                  15 分 | 4 人分
-                </p>
-                <div
-                  class="recipe-tags"
-                >
-                  <span>
-                    汁物
-                  </span>
-                  <span>
-                    基本
-                  </span>
                   <span>
                     家庭料理
                   </span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article
-            class="recipe-card"
-          >
-            <button
-              aria-label="お気に入りに追加"
-              class="favorite-button"
-              type="button"
-            >
-              ☆
-            </button>
-            <a
-              class="recipe-link"
-              data-discover="true"
-              href="/recipe/matcha-pudding"
-            >
-              <img
-                alt="抹茶プリン"
-                class="recipe-image"
-                src="data:image/svg+xml,%3csvg%20width='1200'%20height='900'%20viewBox='0%200%201200%20900'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='1200'%20height='900'%20fill='%23F3E9D9'/%3e%3cellipse%20cx='596'%20cy='752'%20rx='326'%20ry='80'%20fill='%23D8C4AA'/%3e%3crect%20x='294'%20y='237'%20width='620'%20height='390'%20rx='40'%20fill='%231F3022'/%3e%3crect%20x='330'%20y='272'%20width='548'%20height='318'%20rx='24'%20fill='%232F4A34'/%3e%3cellipse%20cx='492'%20cy='410'%20rx='142'%20ry='126'%20fill='%23F7F0E7'/%3e%3cellipse%20cx='706'%20cy='410'%20rx='142'%20ry='126'%20fill='%23F7F0E7'/%3e%3cellipse%20cx='492'%20cy='410'%20rx='112'%20ry='94'%20fill='%239EC173'/%3e%3cellipse%20cx='706'%20cy='410'%20rx='112'%20ry='94'%20fill='%239EC173'/%3e%3cpath%20d='M430%20453C458%20432%20526%20430%20559%20453'%20stroke='%235A7B42'%20stroke-width='14'%20stroke-linecap='round'/%3e%3cpath%20d='M645%20453C673%20432%20741%20430%20774%20453'%20stroke='%235A7B42'%20stroke-width='14'%20stroke-linecap='round'/%3e%3ccircle%20cx='472'%20cy='382'%20r='12'%20fill='%23F7F0E7'/%3e%3ccircle%20cx='726'%20cy='372'%20r='10'%20fill='%23F7F0E7'/%3e%3cpath%20d='M864%20196C905%20214%20942%20249%20972%20296'%20stroke='%23AB7E4B'%20stroke-width='16'%20stroke-linecap='round'/%3e%3c/svg%3e"
-              />
-              <div
-                class="recipe-info"
-              >
-                <div
-                  class="recipe-topline"
-                >
-                  <span>
-                    京都
-                  </span>
                   <span>
                     夏
                   </span>
                 </div>
                 <h3>
-                  抹茶プリン
+                  茄子の味噌煮
                 </h3>
                 <p>
-                  抹茶のほろ苦さとミルクのコクを合わせた、食後にうれしい和風デザートです。
-                </p>
-                <p
-                  class="recipe-meta"
-                >
-                  25 分 | 4 人分
-                </p>
-                <div
-                  class="recipe-tags"
-                >
-                  <span>
-                    甘味
-                  </span>
-                  <span>
-                    抹茶
-                  </span>
-                  <span>
-                    冷たい
-                  </span>
-                </div>
-              </div>
-            </a>
-          </article>
-          <article
-            class="recipe-card"
-          >
-            <button
-              aria-label="お気に入りに追加"
-              class="favorite-button"
-              type="button"
-            >
-              ☆
-            </button>
-            <a
-              class="recipe-link"
-              data-discover="true"
-              href="/recipe/soba"
-            >
-              <img
-                alt="冷やし天ざるそば"
-                class="recipe-image"
-                src="data:image/svg+xml,%3csvg%20width='1200'%20height='900'%20viewBox='0%200%201200%20900'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='1200'%20height='900'%20fill='%23EFE2D0'/%3e%3cellipse%20cx='604'%20cy='752'%20rx='332'%20ry='82'%20fill='%23D3B89C'/%3e%3crect%20x='270'%20y='260'%20width='668'%20height='362'%20rx='34'%20fill='%238F5C34'/%3e%3crect%20x='306'%20y='294'%20width='596'%20height='294'%20rx='24'%20fill='%23B07446'/%3e%3cpath%20d='M390%20402C445%20355%20495%20352%20543%20395C592%20438%20642%20438%20694%20393C746%20347%20805%20352%20852%20401'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M389%20447C444%20400%20494%20396%20543%20439C592%20482%20644%20484%20697%20438C750%20392%20804%20396%20851%20446'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M396%20494C451%20449%20500%20446%20549%20487C598%20529%20647%20530%20700%20489C753%20449%20802%20448%20844%20484'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M414%20352C468%20315%20530%20323%20580%20360'%20stroke='%236F8D4A'%20stroke-width='18'%20stroke-linecap='round'/%3e%3cpath%20d='M670%20352C721%20315%20781%20322%20829%20360'%20stroke='%236F8D4A'%20stroke-width='18'%20stroke-linecap='round'/%3e%3ccircle%20cx='498'%20cy='331'%20r='16'%20fill='%23D6D0C0'/%3e%3ccircle%20cx='743'%20cy='335'%20r='14'%20fill='%23D6D0C0'/%3e%3cpath%20d='M945%20162L799%20286'%20stroke='%234A3828'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M1002%20208L853%20320'%20stroke='%234A3828'%20stroke-width='16'%20stroke-linecap='round'/%3e%3c/svg%3e"
-              />
-              <div
-                class="recipe-info"
-              >
-                <div
-                  class="recipe-topline"
-                >
-                  <span>
-                    長野
-                  </span>
-                  <span>
-                    夏
-                  </span>
-                </div>
-                <h3>
-                  冷やし天ざるそば
-                </h3>
-                <p>
-                  香りの良いそばを冷たいつゆで楽しむ、暑い日にうれしい定番メニューです。
+                  定番の関東かてり料理。ナスに豚ひき肉、生姜、ニンニクを濃厚な味噌汁で煮込み、果肉がクリーミーになり、肌の形が保たれるまで煮込みます。豚脂肪は、味噌の脂溶性の香りを溶かし、オウアミ（豚イノシネート+味噌グルタミン酸塩）の相乗効果を生み出し、ナスを「水のスポンジ」から「味のスポンジ」に変えます。秋冬の最も暖かい料理の1つである温かいご飯を添えてお召し上がりいただけます。
                 </p>
                 <p
                   class="recipe-meta"
@@ -654,15 +354,2023 @@ exports[`App snapshots > matches the home page snapshot 1`] = `
                   class="recipe-tags"
                 >
                   <span>
-                    麺料理
+                    レシピ
                   </span>
                   <span>
-                    さっぱり
+                    kate - ryori
                   </span>
                   <span>
-                    和ランチ
+                    ナス
+                  </span>
+                  <span>
+                    味噌
+                  </span>
+                  <span>
+                    nimono
                   </span>
                 </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/baklazhany-tushyonye-v-mentsuyu"
+            >
+              <img
+                alt="茄子の煮浸し"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  茄子の煮浸し
+                </h3>
+                <p>
+                  Классическое летнее блюдо катэ-рёри, использующее технику **нимонo** (煮物 — тушёные блюда) с методом **ницукэ** (煮付け — тушение в соусе до впитывания). Баклажаны быстро обжариваются до кремовой текстуры, затем погружаются в горячий мэнцую (концентрат уами от дзару-соба) с имбирём и тушатся 5-7 минут до полного впитывания. Подаются **холодными или комнатной температуры** — именно так раскрывается глубина вкуса. Название переводится как «баклажан, тушёный и погружённый» (煮 = варить/тушить, 浸し = погружать). Сезонное блюдо: июль-август — пик сюн (旬) для баклажанов.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  20 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    ナス
+                  </span>
+                  <span>
+                    夏
+                  </span>
+                  <span>
+                    nimono
+                  </span>
+                  <span>
+                    寒い
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/baklazhany-tushyonye-v-souse-tare"
+            >
+              <img
+                alt="茄子のtare煮"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  茄子のtare煮
+                </h3>
+                <p>
+                  Быстрая вариация классического нибитаси (煮浸し), где вместо самостоятельно приготовленного вариситы используется готовый соус **тарэ** (たれ) — концентрат уами на основе даши, соевого соуса и мирина. Баклажаны быстро обжариваются для открытия пор и реакции Майяра, затем тушатся в разбавленном тарэ до кремовой текстуры и глянцевой глазури. Подаётся на горячем рисе с половинкой адзицуке-тамаго для протеинового баланса и кремового желтка, который контрастирует с глянцевым баклажаном. Блюдо построено на принципе **моттайнай** (もったいない, безотходность): используется готовый рис, готовые адзицуке-тамаго и готовый соус таре — минимум усилий, максимум вкуса.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  20 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    ナス
+                  </span>
+                  <span>
+                    風袋
+                  </span>
+                  <span>
+                    速い
+                  </span>
+                  <span>
+                    nimono
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/buta-no-syoga-yaki-s-sunomono"
+            >
+              <img
+                alt="豚の生姜焼き с суномоно"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  豚の生姜焼き с суномоно
+                </h3>
+                <p>
+                  Классическое блюдо японской домашней кухни (катэ-рёри) и изакайи. Тонкие ломтики свиной лопатки быстро обжариваются до реакции Майяра, а затем глазируются в густом, ароматном соусе на основе свежего имбиря, соевого соуса и мирина. Чтобы сбалансировать насыщенность мяса, блюдо подается с быстрым **суномоно** (酢の物) из огурца и пекинской капусты. Кислота рисового уксуса и хруст овощей «очищают» нёбо, создавая идеальный текстурный и вкусовой контраст.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  25 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    居酒屋
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    豚肉
+                  </span>
+                  <span>
+                    ショウガ
+                  </span>
+                  <span>
+                    低脂肪
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/domashnyaya-lapsha-udon"
+            >
+              <img
+                alt="手打ちうどん"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  手打ちうどん
+                </h3>
+                <p>
+                  Классическая японская лапша, приготовленная вручную. Секрет идеального удона — не в ингредиентах (их всего три: мука, соль, вода), а в технике: строгий баланс соли и воды, интенсивное вымешивание для развития плотной сети клейковины и обязательный отдых теста. Это создаёт фирменную текстуру **коши** (コシ) — упругость и приятное сопротивление при укусе. Стиль **Сануки-удон** (讃岐うどん) из префектуры Кагава считается эталоном. Подаётся в чистом бульоне какэ-дзиру с нежным тофу, вешенками и пекинской капустой. Название переводится как «удон ручной работы» (手打ち = ручная работа, 麺 = лапша).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  60 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    удон
+                  </span>
+                  <span>
+                    лапша
+                  </span>
+                  <span>
+                    тэути
+                  </span>
+                  <span>
+                    сануки
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/kansay-layt-versiya"
+            >
+              <img
+                alt="Кансай, лайт-версия"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  Кансай, лайт-версия
+                </h3>
+                <p>
+                  Адаптированный классический рецепт с пекинской капустой — для лёгкого усвоения без потери аутентичности
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  1229 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    Кансай,
+                  </span>
+                  <span>
+                    лайт-версия
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/losos-teriyaki-na-rise"
+            >
+              <img
+                alt="лосось Teriyaki на рисе"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  лосось Teriyaki на рисе
+                </h3>
+                <p>
+                  Нежный лосось в глянцевом соусе тэрияки на подушке из приправленного риса. Блюдо балансирует умами, лёгкую сладость и кислотность, при этом остаётся относительно лёгким за счёт контроля масла и акцента на технике, а не на жире.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  35 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    лосось
+                  </span>
+                  <span>
+                    Teriyaki
+                  </span>
+                  <span>
+                    рисе
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/miso-sup-bazovyy"
+            >
+              <img
+                alt="味噌汁"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  味噌汁
+                </h3>
+                <p>
+                  Фундаментальное блюдо японской домашней кухни (катэ-рёри), подаваемое к каждому приёму пищи. Прозрачный бульон даши обогащается ферментированной мисо-пастой, создавая глубокий умами-профиль с нотами солёности, сладости и лёгкой кислинки. Добавки (тофу, еноки, зелёный лук) дают текстурный контраст и визуальную гармонию. Ключевой принцип: **мисо никогда не кипятится** — это сохраняет аромат, пробиотики и деликатный вкус.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  10 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    味噌
+                  </span>
+                  <span>
+                    суп
+                  </span>
+                  <span>
+                    даши
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/miso-sup-s-zharenym-tofu"
+            >
+              <img
+                alt="揚げ出し味噌汁"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  揚げ出し味噌汁
+                </h3>
+                <p>
+                  Гибрид двух классических блюд — мисо-сиру (味噌汁) и агэдаши-дофу (揚げ出し豆腐). Шёлковый тофу нарезается кубиками, обваливается в крахмале и обжаривается до хрустящей корочки, затем добавляется в горячий мисо-суп. Результат — тофу с **частично сохранённой хрустящей корочкой** снаружи и **кремовой серединой** внутри, плавающий в насыщенном мисо-бульоне. Блюдо сочетает текстуру агэдаши (хруст + нежность) с глубиной уами мисо-сиру. Подаётся горячим с топпингами: тёртый имбирь, зелёный лук, кунжут.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  25 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    味噌
+                  </span>
+                  <span>
+                    суп
+                  </span>
+                  <span>
+                    тофу
+                  </span>
+                  <span>
+                    агэдаши
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/okinavskaya-tomlyonaya-svinina"
+            >
+              <img
+                alt="ラフテー"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    冬
+                  </span>
+                </div>
+                <h3>
+                  ラフテー
+                </h3>
+                <p>
+                  Классическое блюдо кухни Рюкю (Окинава), представляющее собой свинину, медленно томлёную в сладко-солёном бульоне до состояния, когда жир и коллаген превращаются в упругий, полупрозрачный гель, а мясо распадается на волокна при малейшем нажатии палочками. В отличие от материкового японского какуни (角煮), рафутэ имеет более чистый, сладковатый профиль и традиционно готовится с использованием окинавского спирта авамори (泡盛). Поскольку авамори и саке отсутствуют в вашем наборе, их деглазирующие и смягчающие свойства компенсируются комбинацией рисового уксуса (для расщепления волокон), обильного имбиря и обязательного этапа бланширования (ю-коори), что полностью устраняет специфический запах свинины.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  150 分 | 3 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    окинава
+                  </span>
+                  <span>
+                    рюкю
+                  </span>
+                  <span>
+                    豚肉
+                  </span>
+                  <span>
+                    nimono
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/rassypchatyy-farsh-dlya-holodnyh-blyud"
+            >
+              <img
+                alt="そぼろの肉"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  そぼろの肉
+                </h3>
+                <p>
+                  Универсальная техника приготовления рассыпчатого фарша с многослойным уами-профилем, специально адаптированная для холодных блюд (хияси-тюка, донбури, бэнто). Ключевое отличие от обычной обжарки — **четырёхэтапная техника**: (1) карамелизация без перемешивания для реакции Майяра, (2) ароматическая база из имбиря и чеснока, (3) нидзукэ (煮付け) — тушение в соусе до глянцевого состояния, (4) финиш кунжутным маслом после выключения огня. Уами строится на синергии трёх источников: глутамат (соевый соус) + инозинат (мясо + даши) + гуанилат (устричный соус). Результат — фарш с **глубоким, многослойным вкусом**, который не теряется на фоне холодных соусов и свежих овощей.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  15 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    техника
+                  </span>
+                  <span>
+                    фарш
+                  </span>
+                  <span>
+                    умами
+                  </span>
+                  <span>
+                    сообооро
+                  </span>
+                  <span>
+                    компонент
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/rassypchatyy-farsh-na-rise"
+            >
+              <img
+                alt="そぼろ丼"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  そぼろ丼
+                </h3>
+                <p>
+                  Классическое блюдо японской домашней кухни (катэ-рёри) и основа для хинамэси-бэнто (праздничного ланч-бокса). Два вида рассыпчатой «крошки» — сладко-солёный фарш индейки ( &gt; нику-но соборо) и нежный яичный скрэмбл (иритамаго) — подаются рядом на белом рисе, создавая визуальный контраст двух цветов и двойной текстурный опыт. Блюдо строится на принципе «двойного соборо»: каждый компонент готовится отдельно до состояния мелких, сухих крошек, которые не смешиваются до момента еды.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  25 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    донбури
+                  </span>
+                  <span>
+                    соборо
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    бэнто
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/s-lososem-ili-vegetarianskiy"
+            >
+              <img
+                alt="с лососем или вегетарианский"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  с лососем или вегетарианский
+                </h3>
+                <p>
+                  Лёгкий, умами-насыщенный суп на основе даши с мисо-пастой. Идеальный компаньон к донбури: не перегружает, а балансирует трапезу. Можно приготовить с лососем или в вегетарианском варианте.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  20 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    суп
+                  </span>
+                  <span>
+                    даши
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/sambusa-iz-sloyonogo-testa-s-sochnoy-indeykoy"
+            >
+              <img
+                alt="Самбуса из слоёного теста с сочной индейкой"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  Самбуса из слоёного теста с сочной индейкой
+                </h3>
+                <p />
+                <p
+                  class="recipe-meta"
+                >
+                  30 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    Самбуса
+                  </span>
+                  <span>
+                    слоёного
+                  </span>
+                  <span>
+                    теста
+                  </span>
+                  <span>
+                    сочной
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/svinina-s-bolgarskim-pertsem"
+            >
+              <img
+                alt="青椒肉絲"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  青椒肉絲
+                </h3>
+                <p>
+                  Классическое блюдо ва-тюка (японо-китайской кухни), появившееся в эпоху Мэйдзи как адаптация китайского «перец с мясной соломкой». Тонкая соломка свинины проходит технику «бархатного мяса» (velvet meat) — маринование в соевом соусе с крахмалом для защиты от пересыхания. Овощи обжариваются на сильном огне до состояния «аль денте», сохраняя хруст и яркий цвет. Финальный соус строится на трёх уровнях уами: соевый (глутамат) + устричный (нуклеотиды) + кунжутное масло (аромат). Подаётся на горячем рисе.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  23 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    ва-тюка
+                  </span>
+                  <span>
+                    豚肉
+                  </span>
+                  <span>
+                    перец
+                  </span>
+                  <span>
+                    вок
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/sloyonye-konvertiki-s-rassypchatym-farshem-i-syrom"
+            >
+              <img
+                alt="そぼろパイ"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  そぼろパイ
+                </h3>
+                <p>
+                  Фьюжн-блюдо в стиле современной японской домашней кухни (катэ-рёри), сочетающее аутентичную технику **со:бо:ро** (そぼろ — рассыпчатый фарш с глянцевой глазурью) и готовое слоёное тесто. Начинка — фарш индейки, приготовленный по четырёхэтапной технике (карамелизация → ароматы → нидзукэ → финиш), с кубиками адыгейского сыра и зелёным луком, запечатанная в хрустящее слоёное тесто. Адыгейский сыр при запекании **не плавится**, а размягчается, давая кремовые вкрапления внутри — это работает как текстурный контраст с рассыпчатым фаршем. Подаётся с горячим рисом и мисо-сиру по принципу **итидзю-сансай** (一汁三菜). Название: そぼろ (рассыпчатый фарш) + パイ (пай, от англ. pie).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  45 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    фьюжн
+                  </span>
+                  <span>
+                    ёсёку
+                  </span>
+                  <span>
+                    фарш
+                  </span>
+                  <span>
+                    соборо
+                  </span>
+                  <span>
+                    слоёное_тесто
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/syrniki-s-makom-i-vanilyu"
+            >
+              <img
+                alt="Сырники с маком и ванилью"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  Сырники с маком и ванилью
+                </h3>
+                <p>
+                  Классические русские сырники с маком и ванилью, приготовленные по усовершенствованной технике: творог 9% отцежен для удаления лишней влаги, желток взбит с сахаром в эмульсию, белок введён жидким в конце для нежной суфлеобразной текстуры, мак предварительно замочен в тёплом молоке для раскрытия орехового аромата. Двухэтапная жарка (сковорода + духовка) даёт хрустящую корочку без избытка жира и равномерную кремовую середину.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  45 分 | 4 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    сырники
+                  </span>
+                  <span>
+                    творог
+                  </span>
+                  <span>
+                    десерт
+                  </span>
+                  <span>
+                    завтрак
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/treska-zapechyonnaya-s-solyu"
+            >
+              <img
+                alt="鱈の塩焼き"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  鱈の塩焼き
+                </h3>
+                <p>
+                  Фундаментальное блюдо японской домашней кухни (катэ-рёри), представляющее технику **сиояки** (塩焼き, "солевая обжарка"). Филе белой рыбы натирается солью, оставляется на 20-30 минут для осмоса (шиобури, 塩振り), затем обсушивается и обжаривается до хрустящей корочки с нежной, слоистой мякотью внутри. Подаётся с тёртым дайконом (дайкон-ороси, 大根おろし) и соусом для макания — в данном случае используется **мэнцую**, оставшийся от дзару-соба, что даёт более сложный уами-профиль, чем обычный соевый соус. Блюдо построено на принципе **минимализма**: минимум вмешательства — максимум вкуса рыбы. Название переводится как "соль-обжарка" (塩 = соль, 焼き = обжарка).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  40 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    рыба
+                  </span>
+                  <span>
+                    сиояки
+                  </span>
+                  <span>
+                    速い
+                  </span>
+                  <span>
+                    мэнцую
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/uzhin-turkey-teriyaki-donburi-s-kunzhutnoy-kitayskoy-kapusto"
+            >
+              <img
+                alt="Ужин: Turkey Teriyaki Donburi с кунжутной китайской капустой"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  Ужин: Turkey Teriyaki Donburi с кунжутной китайской капустой
+                </h3>
+                <p>
+                  Быстрый, аутентичный японский рисовый боул с фаршем индейки в домашнем терияки-соусе и освежающим салатом.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  35 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    Ужин:
+                  </span>
+                  <span>
+                    Turkey
+                  </span>
+                  <span>
+                    Teriyaki
+                  </span>
+                  <span>
+                    Donburi
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/uksusnyy-salat"
+            >
+              <img
+                alt="酢の物 с огурцом и Айсбергом"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  酢の物 с огурцом и Айсбергом
+                </h3>
+                <p>
+                  Классический японский уксусный салат, построенный на принципе **санбайзу** (三杯酢, «три чашки уксуса») — базовой заправке из равных частей уксуса, соевого соуса и сахара с добавлением даши для уами. Огурцы обрабатываются техникой **итатэ-сёдзи** (板ずり, «натирание на доске») с солью — это разрушает клеточные стенки, удаляет лишнюю влагу и сохраняет хруст. Айсберг добавляется в последнюю минуту для свежего текстурного контраста. Блюдо подаётся холодным, балансирует тяжёлые, острые или жирные блюда (как карэ-райсу) кислотой и свежестью.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  10 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    салат
+                  </span>
+                  <span>
+                    夏
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    寒い
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/holodnaya-grechnevaya-lapsha-na-bambukovom-site"
+            >
+              <img
+                alt="ざるそば"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  ざるそば
+                </h3>
+                <p>
+                  Классическое летнее блюдо японской кухни, появившееся в период Эдо (1603-1868). Гречневая лапша (соба) варится, промывается в ледяной воде для удаления крахмальной слизи (ぬめり, нумэри) и подаётся охлаждённой на бамбуковом сите (дзару, ざる — отсюда название). Макется в холодный соус мэнцую (つゆ), построенный на синергии трёх уами-источников: глутамат (соевый соус) + инозинат (кацуобуси) + гуанилат (комбу). Блюдо построено на принципе **простоты и уважения к ингредиенту**: нет места скрыть плохую лапшу или слабый соус.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  15 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    соба
+                  </span>
+                  <span>
+                    寒い
+                  </span>
+                  <span>
+                    夏
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/holodnyy-letniy-miso-sup-s-ogurtsom-i-kunzhutom"
+            >
+              <img
+                alt="冷やし汁"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  冷やし汁
+                </h3>
+                <p>
+                  Аутентичное летнее блюдо из префектур Миядзаки (宮崎) и Ямагата (山形) на острове Кюсю и севере Хонсю. В отличие от горячего мисо-сиру, хиядзиру подаётся **ледяным**, часто со льдом, и строится на принципе **орехово-освежающего контраста**: мисо растирается с обжаренным кунжутом (иригома, いりごま), создавая мощную ореховую базу, которая смешивается с холодным даши-бульоном. Огурцы обрабатываются техникой **итатэ-сёдзи** (板ずり, натирание с солью) для хруста и удаления лишней влаги. Подаётся с рисом как освежающий обед в жару. Название переводится как «охлаждённый суп» (冷やし = охлаждённый, 汁 = суп/бульон).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  20 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    味噌
+                  </span>
+                  <span>
+                    суп
+                  </span>
+                  <span>
+                    夏
+                  </span>
+                  <span>
+                    寒い
+                  </span>
+                  <span>
+                    кунжут
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/holodnyy-ramen-salat"
+            >
+              <img
+                alt="冷やし中華"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  冷やし中華
+                </h3>
+                <p>
+                  Летняя классика японской ва-тюка (японо-китайской кухни), появившаяся в Sendai в 1937 году как способ охладить рамен. Варёная лапша охлаждается в ледяной воде, подаётся с тонко нарезанными овощами, омлетной соломкой (кинси-тамаго) и мясом, поливается кисло-сладким соусом на базе соевого соуса, рисового уксуса, сахара, кунжутного масла и даши. Блюдо построено на принципе **температурного контраста**: ледяная лапша + кисло-сладкий соус + хрустящие свежие овощи. Название переводится как «охлаждённый китайский» (冷やし = охлаждённый, 中華 = китайский). В этой адаптации используются макароны вместо рамен-лапши и фарш индейки вместо традиционной ветчины/ча-сю.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  30 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    ва-тюка
+                  </span>
+                  <span>
+                    лапша
+                  </span>
+                  <span>
+                    夏
+                  </span>
+                  <span>
+                    寒い
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/tsukune-iz-indeyki-s-sousom-tare"
+            >
+              <img
+                alt="Цукунэ из индейки с соусом Таре"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  Цукунэ из индейки с соусом Таре
+                </h3>
+                <p />
+                <p
+                  class="recipe-meta"
+                >
+                  15 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    居酒屋
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/yaytsa-marinovannye-v-tare"
+            >
+              <img
+                alt="味付け玉子"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  味付け玉子
+                </h3>
+                <p>
+                  Классический компонент японской кухни, обязательный спутник рамена, бэнто и идзакая-закусок. Сваренные всмятку яйца (6-6.5 мин варки для кремового желтка) погружаются в сбалансированный соус **тарэ** (たれ) на основе соевого соуса, мирина и даши. За счёт осмоса влага из яичного белка замещается уами-насыщенным маринадом: белок приобретает плотную, но нежную текстуру и цвет красного дерева, а желток остаётся кремовым, пастообразным, «липнущим к нёбу» (とろとろ, торо-торо). Название переводится как «приправленное яйцо» (味付け = приправка, 玉子 = яйцо).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  10 分 | 4 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    яйца
+                  </span>
+                  <span>
+                    маринад
+                  </span>
+                  <span>
+                    рамен
+                  </span>
+                  <span>
+                    бэнто
+                  </span>
+                  <span>
+                    идзакая
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/yaponskiy-blin-s-kapustoy"
+            >
+              <img
+                alt="お好み焼き с индейкой"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  お好み焼き с индейкой
+                </h3>
+                <p>
+                  Классическое блюдо уличной кухни Осаки (関西風, кансай-фу). Тесто на основе даши с минимально взбитым яйцом смешивается с тонко нашинкованной капустой и фаршем индейки, обжаривается до хрустящей корочки. Подаётся под соусом Otafuku, кунжутным соусом, посыпается кунжутом и зелёным луком. Название переводится как «жарь, как нравится» (お好み = как нравится, 焼き = жарить) — отражает гибкость блюда: можно добавлять любые ингредиенты.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  25 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    окономи
+                  </span>
+                  <span>
+                    капуста
+                  </span>
+                  <span>
+                    ёсёку
+                  </span>
+                  <span>
+                    осака
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/yaponskiy-omlet-s-kontrastnoy-teksturoy"
+            >
+              <img
+                alt="японский омлет с контрастной текстурой"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  японский омлет с контрастной текстурой
+                </h3>
+                <p>
+                  Слоёный омлет, приготовленный в специальной сковороде. Версия адаптирована под предпочтение **минимального взбивания яиц** — для сохранения контраста между белком и желтком, что создаёт интересную текстуру и визуальный эффект «мраморности».
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  15 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    японский
+                  </span>
+                  <span>
+                    омлет
+                  </span>
+                  <span>
+                    контрастной
+                  </span>
+                  <span>
+                    текстурой
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/yaponskoe-karri-s-indeykoy-i-tykvoy"
+            >
+              <img
+                alt="カレーライス"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  カレーライス
+                </h3>
+                <p>
+                  Классическое блюдо ёсёку (японской адаптации западной кухни), появившееся в эпоху Мэйдзи (1868-1912) через британский флот. В отличие от индийского или тайского карри, японское карри **густое, сладковатое, без выраженной остроты** — построено на балансе уами и мягкой сладости овощей. Основа — соус карри (готовый ру), обогащённый уами через устричный соус и соевый. Фарш индейки готовится техникой со:бо:ро (карамелизация без перемешивания), тыква даёт натуральную сезонную сладость, картофель — крахмальную густоту. Подаётся на короткозёрном рисе.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  50 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    карри
+                  </span>
+                  <span>
+                    ёсёку
+                  </span>
+                  <span>
+                    тыква
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/カツ丼"
+            >
+              <img
+                alt="カツ丼"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  カツ丼
+                </h3>
+                <p>
+                  Классическое японское донбури — хрустящая свиная отбивная в панировке (тонкацу), кратко протушенная в сладко-солёном бульоне варисита с яйцом и поданная на горячем рисе. Блюдо балансирует три текстуры: хрустящую корочку, сочное мясо и нежное, едва схватившееся яйцо. Яйцо готовится вашим методом — минимальное взбивание, сохраняющее контраст белка и желтка, что соответствует аутентичной технике «полувзбитого яйца» (溶き卵, токи-тамаго).
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  45 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    донбури
+                  </span>
+                  <span>
+                    кацу
+                  </span>
+                  <span>
+                    идзакая
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/ぶたのしょうがやきどん"
+            >
+              <img
+                alt="豚の生姜焼き丼"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  豚の生姜焼き丼
+                </h3>
+                <p>
+                  Классическое блюдо японской домашней кухни и идзакай. Тонкие ломтики свинины, обжаренные до золотистой корочки и покрытые глянцевым соусом с обилием свежего имбиря. Свинина обеспечивает сочность и богатый умами, который уравновешивается острой свежестью имбиря и хрустом сырых овощей.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  25 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    ぶたのしょうがやきどん
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/味噌鍋"
+            >
+              <img
+                alt="味噌鍋"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  味噌鍋
+                </h3>
+                <p>
+                  Классическое домашнее японское набэмоно (горячий горшок), построенное на принципе **тройной синергии умами**: глутамат (мисо-паста) + инозинат (даши/свинина) + гуанилат (вёшенки). Блюдо адаптировано под ваши предпочтения: свинина тщательно обрезается от видимого жира для облегчения пищеварения, а техника добавления мисо в конце сохраняет его деликатный аромат и пробиотики. Текстура строится на контрасте: хрустящие стебли китайской капусты, мясистые вёшенки, тающий шёлковый тофу и нежное постное мясо.
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  30 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                >
+                  <span>
+                    レシピ
+                  </span>
+                  <span>
+                    набэмоно
+                  </span>
+                  <span>
+                    味噌
+                  </span>
+                  <span>
+                    kate - ryori
+                  </span>
+                  <span>
+                    低脂肪
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article
+            class="recipe-card"
+          >
+            <button
+              aria-label="お気に入りに追加"
+              class="favorite-button"
+              type="button"
+            >
+              ☆
+            </button>
+            <a
+              class="recipe-link"
+              data-discover="true"
+              href="/recipe/親子丼"
+            >
+              <img
+                alt="親子丼"
+                class="recipe-image"
+                src="/recipe-placeholder.svg"
+              />
+              <div
+                class="recipe-info"
+              >
+                <div
+                  class="recipe-topline"
+                >
+                  <span>
+                    家庭料理
+                  </span>
+                  <span>
+                    通年
+                  </span>
+                </div>
+                <h3>
+                  親子丼
+                </h3>
+                <p>
+                  Классический донбури «родитель и дитя» в лёгкой адаптации
+                </p>
+                <p
+                  class="recipe-meta"
+                >
+                  27 分 | 2 人分
+                </p>
+                <div
+                  class="recipe-tags"
+                />
               </div>
             </a>
           </article>
@@ -837,9 +2545,9 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
           class="recipe-detail-header"
         >
           <img
-            alt="海老と野菜の天ぷら"
+            alt="茄子の味噌煮"
             class="recipe-hero-image"
-            src="/src/assets/tempura-vegetables-process.webp"
+            src="/recipe-placeholder.svg"
           />
           <div
             class="header-copy"
@@ -868,25 +2576,25 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
               Recipe Detail
             </p>
             <h1>
-              海老と野菜の天ぷら
+              茄子の味噌煮
             </h1>
             <p>
-              海老、かぼちゃ、ししとうを軽い衣で揚げる、週末の定番てんぷら盛り合わせです。
+              定番の関東かてり料理。ナスに豚ひき肉、生姜、ニンニクを濃厚な味噌汁で煮込み、果肉がクリーミーになり、肌の形が保たれるまで煮込みます。豚脂肪は、味噌の脂溶性の香りを溶かし、オウアミ（豚イノシネート+味噌グルタミン酸塩）の相乗効果を生み出し、ナスを「水のスポンジ」から「味のスポンジ」に変えます。秋冬の最も暖かい料理の1つである温かいご飯を添えてお召し上がりいただけます。
             </p>
             <div
               class="meta-tags"
             >
               <span>
-                45 分
+                35 分
               </span>
               <span>
                 2 人分
               </span>
               <span>
-                980 円の目安
+                0 円の目安
               </span>
               <span>
-                東京
+                家庭料理
               </span>
               <span>
                 中級
@@ -896,13 +2604,19 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
               class="recipe-tags"
             >
               <span>
-                揚げ物
+                レシピ
               </span>
               <span>
-                和定食
+                kate - ryori
               </span>
               <span>
-                サクサク
+                ナス
+              </span>
+              <span>
+                味噌
+              </span>
+              <span>
+                nimono
               </span>
             </div>
           </div>
@@ -952,38 +2666,99 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
                 </div>
               </div>
             </div>
-            <ul>
-              <li>
-                海老 6尾
-              </li>
-              <li>
-                かぼちゃ 120g
-              </li>
-              <li>
-                ししとう 6本
-              </li>
-              <li>
-                なす 1本
-              </li>
-              <li>
-                薄力粉 100g
-              </li>
-              <li>
-                片栗粉 20g
-              </li>
-              <li>
-                冷水 160ml
-              </li>
-              <li>
-                卵黄 1個分
-              </li>
-              <li>
-                揚げ油 適量
-              </li>
-              <li>
-                天つゆ・大根おろし 適量
-              </li>
-            </ul>
+            <div
+              class="ingredient-group"
+            >
+              <h3>
+                ベース
+              </h3>
+              <ul>
+                <li>
+                  ナス—中3個（〜450 g ） —日本の長いものが好ましい。2 cm角に切る
+                </li>
+                <li>
+                  豚肉（みじん切り、脂肪分20 ％ ） — 350 g —肩または首。赤身ではありません！
+                </li>
+              </ul>
+            </div>
+            <div
+              class="ingredient-group"
+            >
+              <h3>
+                香味ベース
+              </h3>
+              <ul>
+                <li>
+                  フレッシュジンジャー— 20 g （おろし大さじ約2杯） —アロマの基礎、保存しないでください
+                </li>
+                <li>
+                  ニンニク—クローブ2枚—すりおろしまたはみじん切り
+                </li>
+                <li>
+                  スプリングオニオン（白い部分） —羽根2枚—ロースト用
+                </li>
+                <li>
+                  植物油—大さじ2 （ 30 ml ） —みじん切り肉とナスの揚げ物用
+                </li>
+                <li>
+                  ごま油—大さじ1 （ 15 ml ） —揚げる場合は、ナッツの香りがします
+                </li>
+              </ul>
+            </div>
+            <div
+              class="ingredient-group"
+            >
+              <h3>
+                ソース
+              </h3>
+              <ul>
+                <li>
+                  味噌パスタ（粟瀬または赤荘） —大さじ3杯（ 45 g ） — Huamiベース、発酵深さ
+                </li>
+                <li>
+                  しょうゆ—大さじ1.5 （ 22 ml ） —追加のグルタミン酸塩、塩分
+                </li>
+                <li>
+                  みりん—大さじ3 （ 45 ml ） —甘さ、光沢、バランス+日本酒の代わり
+                </li>
+                <li>
+                  水— 80 ml —消火ベース
+                </li>
+                <li>
+                  ダシ（顆粒） —小さじ0.5 —ウアミの強化
+                </li>
+              </ul>
+            </div>
+            <div
+              class="ingredient-group"
+            >
+              <h3>
+                仕上げ
+              </h3>
+              <ul>
+                <li>
+                  ゴマ油—小さじ0.5 —アロマ仕上げ
+                </li>
+                <li>
+                  ローストゴマ—小さじ1 —テクスチャー、ビジュアル
+                </li>
+                <li>
+                  スプリングオニオン（緑の部分） —羽根1〜2枚—サービング用の細いリング
+                </li>
+              </ul>
+            </div>
+            <div
+              class="ingredient-group"
+            >
+              <h3>
+                ご飯
+              </h3>
+              <ul>
+                <li>
+                  ショートグレインライス—生300 g （約600 g ） —温かく調理されたばかりの米
+                </li>
+              </ul>
+            </div>
           </section>
           <section
             class="recipe-detail-section instructions-section"
@@ -991,23 +2766,144 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
             <h2>
               作り方
             </h2>
-            <ol>
-              <li>
-                海老は背わたを取り、尾を残して殻をむき、腹に浅く切り込みを入れてまっすぐにのばします。
-              </li>
-              <li>
-                かぼちゃ、なすは食べやすい厚さに切り、ししとうは数か所に穴を開けておきます。
-              </li>
-              <li>
-                薄力粉と片栗粉を合わせ、卵黄と冷水をさっと混ぜたら粉を加え、だまが少し残る程度で止めます。
-              </li>
-              <li>
-                食材に薄く打ち粉をして衣をまとわせ、170から175度の油で順に揚げます。
-              </li>
-              <li>
-                油を切って器に盛り、天つゆと大根おろしを添えて仕上げます。
-              </li>
-            </ol>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                1️.米の調理
+              </h3>
+              <ol>
+                <li>
+                  水がほぼ透明になるまで、冷水で米を3〜4回すすぎます。
+                </li>
+                <li>
+                  水を1: 1.2で満たし、沸騰させ、火を弱め、蓋の下で** 12分**調理します。
+                </li>
+                <li>
+                  火を消し、ふたの下に** 10分**置きます。
+                </li>
+              </ol>
+            </article>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                2️.ナスの準備（クリティカルステージ！ ）
+              </h3>
+              <ol>
+                <li>
+                  柄を切り落とす。
+                </li>
+                <li>
+                  ** 2 cm **（ナスが長い場合は厚さ1.5cmの半円）に切断します。
+                </li>
+                <li>
+                  **切開のメッシュを作る**（通常の大きなナスを使用している場合） ： 1 cmごとに浅い斜めの切開。これにより、ソースの吸収が速くなります。
+                </li>
+                <li>
+                  **水に浸さないでください！ **近代技術はこれを放棄しました—浸漬はあなたを洗い流します。
+                </li>
+                <li>
+                  苦味を取り除きたい場合（大きく熟しすぎたナスの場合） ：塩をふりかけ、10分間放置し、すすぎ、乾燥させます。新鮮な季節のものは必要ありません。
+                </li>
+              </ol>
+            </article>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                4️.みじん切り肉のロースト（ウアミベースと脂肪クッションの作成）
+              </h3>
+              <ol>
+                <li>
+                  中火またはフライパンを**中〜強火**で加熱します。
+                </li>
+                <li>
+                  **植物油大さじ2 +ごま油大さじ1 **を加えます（合計45 ml ）。
+                </li>
+                <li>
+                  肉のみじん切り350 gを広げ、へらで塊を砕きます。
+                </li>
+                <li>
+                  次の時間まで** 3 ～ 4分**揚げます。
+                </li>
+                <li>
+                  すりおろした生姜、にんにく、ネギの白い部分を加えます。
+                </li>
+                <li>
+                  香りがするまで、さらに** 30秒**揚げます。
+                </li>
+              </ol>
+            </article>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                5️.ナスのロースト（クリティカルステージ！ ）
+              </h3>
+              <ol>
+                <li>
+                  ミンチ肉をフライパンの端にスライドさせます（または一時的にプレートに取り出します）。
+                </li>
+                <li>
+                  **みじん切りのオイルピロー**があるフリースペースには、ナスを置きます。
+                </li>
+                <li>
+                  **中火****で3〜4分**揚げ、次のようになるまでひっくり返します。
+                </li>
+                <li>
+                  みじん切りにした肉と混ぜます。
+                </li>
+              </ol>
+            </article>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                6️.味噌汁煮込み（蓋なし）
+              </h3>
+              <ol>
+                <li>
+                  準備した味噌ソース（〜150 ml ）をフライパンに注ぎます。
+                </li>
+                <li>
+                  **わずかに沸騰させる**。
+                </li>
+                <li>
+                  炎を**弱い**まで下げます。
+                </li>
+                <li>
+                  **蓋なしで**** 8〜10分間**煮込み、次のようになるまで時々かき混ぜます。
+                </li>
+                <li>
+                  **中火**にし、さらに** 3〜5分**蒸発させ、ソースが厚くなり、材料が釉薬で覆われるまで絶えずかき混ぜます。
+                </li>
+              </ol>
+            </article>
+            <article
+              class="instruction-section"
+            >
+              <h3>
+                7 - Finish️ & Serve （終わらせて召し上がれ）
+              </h3>
+              <ol>
+                <li>
+                  火を消しなさい。
+                </li>
+                <li>
+                  **小さじ1/2のゴマ油**を加え、ゆっくりと混ぜます。
+                </li>
+                <li>
+                  熱いご飯を深いボウルに入れます。
+                </li>
+                <li>
+                  茄子とみじん切りにした肉とソースを寛大に上に置きます。
+                </li>
+                <li>
+                  玉ねぎの緑色の部分とゴマを振りかけます。
+                </li>
+              </ol>
+            </article>
           </section>
         </main>
         <section
@@ -1025,7 +2921,7 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
               調理の目安
             </h2>
             <p>
-              難易度は 中級、想定予算は 980円前後です。
+              難易度は 中級、想定予算は 0円前後です。
             </p>
           </article>
           <article
@@ -1080,12 +2976,12 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
               <a
                 class="recipe-link"
                 data-discover="true"
-                href="/recipe/ramen"
+                href="/recipe/baklazhany-tushyonye-v-souse-tare"
               >
                 <img
-                  alt="醤油ラーメン"
+                  alt="茄子のtare煮"
                   class="recipe-image"
-                  src="/src/assets/syoyu-ramen.webp"
+                  src="/recipe-placeholder.svg"
                 />
                 <div
                   class="recipe-info"
@@ -1094,154 +2990,178 @@ exports[`App snapshots > matches the recipe detail page snapshot 1`] = `
                     class="recipe-topline"
                   >
                     <span>
-                      東京
-                    </span>
-                    <span>
-                      冬
-                    </span>
-                  </div>
-                  <h3>
-                    醤油ラーメン
-                  </h3>
-                  <p>
-                    鶏ガラと昆布のうま味を重ねた、すっきりしながらも奥行きのある醤油ラーメンです。
-                  </p>
-                  <p
-                    class="recipe-meta"
-                  >
-                    60 分 | 2 人分
-                  </p>
-                  <div
-                    class="recipe-tags"
-                  >
-                    <span>
-                      麺料理
-                    </span>
-                    <span>
-                      だし
-                    </span>
-                    <span>
-                      温まる
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article
-              class="recipe-card"
-            >
-              <button
-                aria-label="お気に入りに追加"
-                class="favorite-button"
-                type="button"
-              >
-                ☆
-              </button>
-              <a
-                class="recipe-link"
-                data-discover="true"
-                href="/recipe/soba"
-              >
-                <img
-                  alt="冷やし天ざるそば"
-                  class="recipe-image"
-                  src="data:image/svg+xml,%3csvg%20width='1200'%20height='900'%20viewBox='0%200%201200%20900'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='1200'%20height='900'%20fill='%23EFE2D0'/%3e%3cellipse%20cx='604'%20cy='752'%20rx='332'%20ry='82'%20fill='%23D3B89C'/%3e%3crect%20x='270'%20y='260'%20width='668'%20height='362'%20rx='34'%20fill='%238F5C34'/%3e%3crect%20x='306'%20y='294'%20width='596'%20height='294'%20rx='24'%20fill='%23B07446'/%3e%3cpath%20d='M390%20402C445%20355%20495%20352%20543%20395C592%20438%20642%20438%20694%20393C746%20347%20805%20352%20852%20401'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M389%20447C444%20400%20494%20396%20543%20439C592%20482%20644%20484%20697%20438C750%20392%20804%20396%20851%20446'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M396%20494C451%20449%20500%20446%20549%20487C598%20529%20647%20530%20700%20489C753%20449%20802%20448%20844%20484'%20stroke='%235D4331'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M414%20352C468%20315%20530%20323%20580%20360'%20stroke='%236F8D4A'%20stroke-width='18'%20stroke-linecap='round'/%3e%3cpath%20d='M670%20352C721%20315%20781%20322%20829%20360'%20stroke='%236F8D4A'%20stroke-width='18'%20stroke-linecap='round'/%3e%3ccircle%20cx='498'%20cy='331'%20r='16'%20fill='%23D6D0C0'/%3e%3ccircle%20cx='743'%20cy='335'%20r='14'%20fill='%23D6D0C0'/%3e%3cpath%20d='M945%20162L799%20286'%20stroke='%234A3828'%20stroke-width='16'%20stroke-linecap='round'/%3e%3cpath%20d='M1002%20208L853%20320'%20stroke='%234A3828'%20stroke-width='16'%20stroke-linecap='round'/%3e%3c/svg%3e"
-                />
-                <div
-                  class="recipe-info"
-                >
-                  <div
-                    class="recipe-topline"
-                  >
-                    <span>
-                      長野
-                    </span>
-                    <span>
-                      夏
-                    </span>
-                  </div>
-                  <h3>
-                    冷やし天ざるそば
-                  </h3>
-                  <p>
-                    香りの良いそばを冷たいつゆで楽しむ、暑い日にうれしい定番メニューです。
-                  </p>
-                  <p
-                    class="recipe-meta"
-                  >
-                    35 分 | 2 人分
-                  </p>
-                  <div
-                    class="recipe-tags"
-                  >
-                    <span>
-                      麺料理
-                    </span>
-                    <span>
-                      さっぱり
-                    </span>
-                    <span>
-                      和ランチ
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </article>
-            <article
-              class="recipe-card"
-            >
-              <button
-                aria-label="お気に入りに追加"
-                class="favorite-button"
-                type="button"
-              >
-                ☆
-              </button>
-              <a
-                class="recipe-link"
-                data-discover="true"
-                href="/recipe/onigiri"
-              >
-                <img
-                  alt="鮭と梅のおにぎり"
-                  class="recipe-image"
-                  src="/src/assets/onigiri-masu-ume.webp"
-                />
-                <div
-                  class="recipe-info"
-                >
-                  <div
-                    class="recipe-topline"
-                  >
-                    <span>
-                      全国
+                      家庭料理
                     </span>
                     <span>
                       通年
                     </span>
                   </div>
                   <h3>
-                    鮭と梅のおにぎり
+                    茄子のtare煮
                   </h3>
                   <p>
-                    朝食や軽食に使いやすい、塩鮭と梅干しを使った具だくさんのおにぎりセットです。
+                    Быстрая вариация классического нибитаси (煮浸し), где вместо самостоятельно приготовленного вариситы используется готовый соус **тарэ** (たれ) — концентрат уами на основе даши, соевого соуса и мирина. Баклажаны быстро обжариваются для открытия пор и реакции Майяра, затем тушатся в разбавленном тарэ до кремовой текстуры и глянцевой глазури. Подаётся на горячем рисе с половинкой адзицуке-тамаго для протеинового баланса и кремового желтка, который контрастирует с глянцевым баклажаном. Блюдо построено на принципе **моттайнай** (もったいない, безотходность): используется готовый рис, готовые адзицуке-тамаго и готовый соус таре — минимум усилий, максимум вкуса.
                   </p>
                   <p
                     class="recipe-meta"
                   >
-                    20 分 | 3 人分
+                    20 分 | 2 人分
                   </p>
                   <div
                     class="recipe-tags"
                   >
                     <span>
-                      軽食
+                      レシピ
                     </span>
                     <span>
-                      弁当
+                      kate - ryori
                     </span>
                     <span>
-                      米料理
+                      ナス
+                    </span>
+                    <span>
+                      風袋
+                    </span>
+                    <span>
+                      速い
+                    </span>
+                    <span>
+                      nimono
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article
+              class="recipe-card"
+            >
+              <button
+                aria-label="お気に入りに追加"
+                class="favorite-button"
+                type="button"
+              >
+                ☆
+              </button>
+              <a
+                class="recipe-link"
+                data-discover="true"
+                href="/recipe/okinavskaya-tomlyonaya-svinina"
+              >
+                <img
+                  alt="ラフテー"
+                  class="recipe-image"
+                  src="/recipe-placeholder.svg"
+                />
+                <div
+                  class="recipe-info"
+                >
+                  <div
+                    class="recipe-topline"
+                  >
+                    <span>
+                      家庭料理
+                    </span>
+                    <span>
+                      冬
+                    </span>
+                  </div>
+                  <h3>
+                    ラフテー
+                  </h3>
+                  <p>
+                    Классическое блюдо кухни Рюкю (Окинава), представляющее собой свинину, медленно томлёную в сладко-солёном бульоне до состояния, когда жир и коллаген превращаются в упругий, полупрозрачный гель, а мясо распадается на волокна при малейшем нажатии палочками. В отличие от материкового японского какуни (角煮), рафутэ имеет более чистый, сладковатый профиль и традиционно готовится с использованием окинавского спирта авамори (泡盛). Поскольку авамори и саке отсутствуют в вашем наборе, их деглазирующие и смягчающие свойства компенсируются комбинацией рисового уксуса (для расщепления волокон), обильного имбиря и обязательного этапа бланширования (ю-коори), что полностью устраняет специфический запах свинины.
+                  </p>
+                  <p
+                    class="recipe-meta"
+                  >
+                    150 分 | 3 人分
+                  </p>
+                  <div
+                    class="recipe-tags"
+                  >
+                    <span>
+                      レシピ
+                    </span>
+                    <span>
+                      окинава
+                    </span>
+                    <span>
+                      рюкю
+                    </span>
+                    <span>
+                      豚肉
+                    </span>
+                    <span>
+                      nimono
+                    </span>
+                    <span>
+                      kate - ryori
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+            <article
+              class="recipe-card"
+            >
+              <button
+                aria-label="お気に入りに追加"
+                class="favorite-button"
+                type="button"
+              >
+                ☆
+              </button>
+              <a
+                class="recipe-link"
+                data-discover="true"
+                href="/recipe/味噌鍋"
+              >
+                <img
+                  alt="味噌鍋"
+                  class="recipe-image"
+                  src="/recipe-placeholder.svg"
+                />
+                <div
+                  class="recipe-info"
+                >
+                  <div
+                    class="recipe-topline"
+                  >
+                    <span>
+                      家庭料理
+                    </span>
+                    <span>
+                      通年
+                    </span>
+                  </div>
+                  <h3>
+                    味噌鍋
+                  </h3>
+                  <p>
+                    Классическое домашнее японское набэмоно (горячий горшок), построенное на принципе **тройной синергии умами**: глутамат (мисо-паста) + инозинат (даши/свинина) + гуанилат (вёшенки). Блюдо адаптировано под ваши предпочтения: свинина тщательно обрезается от видимого жира для облегчения пищеварения, а техника добавления мисо в конце сохраняет его деликатный аромат и пробиотики. Текстура строится на контрасте: хрустящие стебли китайской капусты, мясистые вёшенки, тающий шёлковый тофу и нежное постное мясо.
+                  </p>
+                  <p
+                    class="recipe-meta"
+                  >
+                    30 分 | 2 人分
+                  </p>
+                  <div
+                    class="recipe-tags"
+                  >
+                    <span>
+                      レシピ
+                    </span>
+                    <span>
+                      набэмоно
+                    </span>
+                    <span>
+                      味噌
+                    </span>
+                    <span>
+                      kate - ryori
+                    </span>
+                    <span>
+                      低脂肪
                     </span>
                   </div>
                 </div>

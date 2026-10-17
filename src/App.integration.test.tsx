@@ -12,10 +12,10 @@ const renderAppAt = (path: string, language: "ja" | "ru" = "ru") => {
 
 describe("App integration", () => {
   it("renders the recipe detail page for a route", async () => {
-    renderAppAt("/recipe/miso-soup");
+    renderAppAt("/recipe/baklazhany-v-miso-s-svinym-farshem");
 
     expect(
-      await screen.findByRole("heading", { name: "Мисо-суп с тофу и вакамэ" }),
+      await screen.findByRole("heading", { name: "Баклажаны в мисо с свиным фаршем" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Похожие рецепты" })).toBeInTheDocument();
   });
@@ -26,7 +26,9 @@ describe("App integration", () => {
 
     await user.type(screen.getByPlaceholderText("Найти рецепт..."), "мисо");
 
-    expect(screen.getByRole("heading", { name: "Мисо-суп с тофу и вакамэ" })).toBeInTheDocument();
+    expect(
+      screen.getAllByRole("heading", { name: "Баклажаны в мисо с свиным фаршем" }).length,
+    ).toBeGreaterThan(0);
     expect(screen.queryByText("Рецепты не найдены")).not.toBeInTheDocument();
 
     await user.clear(screen.getByPlaceholderText("Найти рецепт..."));
@@ -36,7 +38,7 @@ describe("App integration", () => {
     );
 
     expect(
-      await screen.findByRole("heading", { name: "Полных совпадений по имеющимся продуктам пока нет" }),
+      await screen.findByRole("heading", { name: "Можно приготовить уже сейчас" }),
     ).toBeInTheDocument();
 
     await waitFor(() => {

@@ -15,7 +15,7 @@ describe("App snapshots", () => {
   });
 
   it("matches the recipe detail page snapshot", () => {
-    const { asFragment } = renderSnapshotAt("/recipe/tempura");
+    const { asFragment } = renderSnapshotAt("/recipe/baklazhany-v-miso-s-svinym-farshem");
     expect(asFragment()).toMatchSnapshot();
   });
 });
