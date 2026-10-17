@@ -20,6 +20,14 @@ describe("App integration", () => {
     expect(screen.getByRole("heading", { name: "Похожие рецепты" })).toBeInTheDocument();
   });
 
+  it("uses the Japanese recipe description when Japanese is selected", async () => {
+    renderAppAt("/recipe/baklazhany-tushyonye-v-mentsuyu", "ja");
+
+    expect(await screen.findByRole("heading", { name: "茄子の煮浸し" })).toBeInTheDocument();
+    expect(screen.getByText(/家庭料理の定番/)).toBeInTheDocument();
+    expect(screen.queryByText(/Классическое летнее блюдо/)).not.toBeInTheDocument();
+  });
+
   it("filters recipes by search and pantry ingredients", async () => {
     const user = userEvent.setup();
     renderAppAt("/");

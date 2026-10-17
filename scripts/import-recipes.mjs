@@ -1,9 +1,12 @@
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, basename } from "node:path";
 
 const RECIPES_DIR =
   "c:/Users/shure/OneDrive/Documents/Obsidian Vault/06_Кухня/Рецепты";
 const OUTPUT_JSON = new URL("../src/data/recipes.parsed.json", import.meta.url);
+const existingRecipes = existsSync(OUTPUT_JSON)
+  ? JSON.parse(readFileSync(OUTPUT_JSON, "utf8"))
+  : [];
 const SKIP_FILES = new Set([
   "00_Продукты на кухне.md",
   "Сякэ-но-Тэрияки Донбури.md", // дубликат полной версии Саке-но Тэрияки
@@ -316,6 +319,33 @@ const difficultyToLocalized = (value) => {
   return { ja: "中級", ru: "Средняя" };
 };
 
+const hasJapaneseContent = (value) =>
+  Array.isArray(value)
+    ? value.length > 0
+    : typeof value === "string"
+      ? value.trim() !== ""
+      : Boolean(value);
+
+const preserveJapanese = (value, previous) => {
+  if (Array.isArray(value)) {
+    return value.map((item, index) => preserveJapanese(item, previous?.[index]));
+  }
+  if (!value || typeof value !== "object") return value;
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, child]) => {
+      if (key === "ja") {
+        const previousJapanese = previous?.ja;
+        return [
+          key,
+          hasJapaneseContent(previousJapanese) ? previousJapanese : Array.isArray(child) ? [] : "",
+        ];
+      }
+      return [key, preserveJapanese(child, previous?.[key])];
+    }),
+  );
+};
+
 const parseRecipeFile = (filepath) => {
   const filename = basename(filepath);
   if (SKIP_FILES.has(filename)) return null;
@@ -341,12 +371,17 @@ const parseRecipeFile = (filepath) => {
 
   const flatIngredientsRu = ingredientGroups.flatMap((group) => group.itemsRu);
   const flatStepsRu = instructionSections.flatMap((section) => section.stepsRu);
+  const existingRecipe = existingRecipes.find((recipe) => recipe.id === id);
+  const descriptionJa =
+    existingRecipe?.description?.ja && existingRecipe.description.ja !== descriptionRu
+      ? existingRecipe.description.ja
+      : "";
 
-  return {
+  const recipe = {
     id,
     sourceFile: filename,
     title,
-    description: { ru: descriptionRu, ja: descriptionRu },
+    description: { ru: descriptionRu, ja: descriptionJa },
     category,
     image: "",
     prepTime,
@@ -408,6 +443,8 @@ const parseRecipeFile = (filepath) => {
     ingredients: { ru: flatIngredientsRu, ja: flatIngredientsRu },
     instructions: { ru: flatStepsRu, ja: flatStepsRu },
   };
+
+  return preserveJapanese(recipe, existingRecipe);
 };
 
 const files = readdirSync(RECIPES_DIR)
